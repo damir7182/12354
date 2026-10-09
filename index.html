@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Жасанды интеллект және IT Startup — 11-сынып</title>
+<style>
+:root{--bg:#ffffff;--panel:rgba(220,38,38,.045);--panel-2:rgba(220,38,38,.09);--border:rgba(220,38,38,.16);--border-2:rgba(220,38,38,.32);--txt:#1a1a2e;--muted:#6b7280;--cyan:#ef4444;--blue:#dc2626;--purple:#991b1b;--green:#16a34a;--red:#dc2626;--yellow:#ca8a04;--grad:linear-gradient(135deg,#ef4444 0%,#dc2626 45%,#991b1b 100%);--radius:18px;--shadow:0 18px 45px -20px rgba(220,38,38,.18)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;background:#fff;color:var(--txt);line-height:1.65;min-height:100vh;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(760px 520px at 8% -5%,rgba(239,68,68,.14),transparent 62%),radial-gradient(680px 520px at 95% 5%,rgba(220,38,38,.11),transparent 62%),radial-gradient(820px 640px at 50% 110%,rgba(239,68,68,.08),transparent 62%),#fff}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;background-image:radial-gradient(rgba(220,38,38,.07) 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 78%);-webkit-mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 78%)}
+::selection{background:rgba(220,38,38,.22)}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#f5f5f7}
+::-webkit-scrollbar-thumb{background:linear-gradient(#dc2626,#991b1b);border-radius:20px}
+
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem;cursor:pointer;white-space:nowrap;color:#1a1a2e}
+.brand .logo{width:34px;height:34px;border-radius:11px;background:var(--grad);display:grid;place-items:center;font-size:1.05rem;box-shadow:0 0 22px rgba(220,38,38,.45)}
+.brand span.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.nav-links button{background:transparent;border:1px solid transparent;color:var(--muted);padding:8px 13px;border-radius:11px;font-size:.86rem;font-weight:600;cursor:pointer;font-family:inherit;transition:.2s;white-space:nowrap}
+.nav-links button:hover{color:#dc2626;background:var(--panel);border-color:var(--border)}
+.nav-links button.active{color:#fff;background:linear-gradient(135deg,#ef4444,#991b1b);border-color:var(--border-2)}
+.nav-progress{height:3px;background:rgba(220,38,38,.1);position:relative;overflow:hidden}
+.nav-progress i{display:block;height:100%;width:0;background:var(--grad);transition:width .6s cubic-bezier(.4,0,.2,1)}
+
+.wrap{max-width:1180px;margin:0 auto;padding:30px 18px 90px}
+.card{background:linear-gradient(160deg,rgba(254,242,242,.7),#fff);border:1px solid var(--border);border-radius:var(--radius);padding:24px;backdrop-filter:blur(10px);box-shadow:var(--shadow);transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{border-color:var(--border-2)}
+.card.hoverable:hover{transform:translateY(-4px);box-shadow:0 24px 55px -22px rgba(220,38,38,.35)}
+h1,h2,h3,h4{line-height:1.28;font-weight:800;color:#1a1a2e}
+h1{font-size:clamp(1.6rem,3.6vw,2.5rem);letter-spacing:-.5px}
+h2{font-size:clamp(1.25rem,2.4vw,1.7rem);margin-bottom:6px}
+h3{font-size:1.06rem;margin-bottom:8px}
+p{color:#4b5563}
+.muted{color:var(--muted)}
+.small{font-size:.86rem}
+.center{text-align:center}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(235px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.spacer{height:18px}
+.spacer-sm{height:10px}
+
+.btn{display:inline-flex;align-items:center;gap:9px;justify-content:center;background:var(--grad);color:#fff;border:none;border-radius:13px;padding:12px 22px;font-size:.94rem;font-weight:800;cursor:pointer;font-family:inherit;transition:.22s;box-shadow:0 12px 28px -14px rgba(220,38,38,.75)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 34px -14px rgba(153,27,27,.85)}
+.btn.ghost{background:#fff;color:var(--txt);border:1px solid var(--border-2);box-shadow:none}
+.btn.ghost:hover{background:rgba(220,38,38,.05);border-color:var(--red)}
+.btn.sm{padding:8px 15px;font-size:.83rem;border-radius:10px}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+
+.badge{display:inline-flex;align-items:center;gap:7px;background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.36);color:#991b1b;padding:5px 13px;border-radius:999px;font-size:.76rem;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+.badge.purple{background:rgba(153,27,27,.1);border-color:rgba(153,27,27,.4);color:#7f1d1d}
+.badge.cyan{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.36);color:#b91c1c}
+.badge.green{background:rgba(22,163,74,.15);border-color:rgba(22,163,74,.42);color:#15803d}
+.badge.red{background:rgba(220,38,38,.15);border-color:rgba(220,38,38,.42);color:#991b1b}
+
+.hero{position:relative;overflow:hidden;border-radius:26px;border:1px solid var(--border);background:radial-gradient(700px 380px at 78% 12%,rgba(220,38,38,.15),transparent 65%),radial-gradient(600px 380px at 12% 88%,rgba(239,68,68,.11),transparent 65%),linear-gradient(150deg,rgba(254,226,226,.85),#fff);padding:clamp(28px,5vw,58px);box-shadow:var(--shadow)}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;background-image:linear-gradient(rgba(220,38,38,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(220,38,38,.09) 1px,transparent 1px);background-size:52px 52px;mask-image:radial-gradient(circle at 70% 40%,#000,transparent 72%);-webkit-mask-image:radial-gradient(circle at 70% 40%,#000,transparent 72%)}
+.hero > *{position:relative;z-index:2}
+.hero h1{margin:14px 0 12px;max-width:900px}
+.hero p.lead{font-size:clamp(1rem,1.6vw,1.14rem);max-width:760px;color:#4b5563}
+.quote{border-left:3px solid var(--red);padding:14px 18px;margin-top:22px;background:rgba(220,38,38,.06);border-radius:0 14px 14px 0;font-style:italic;color:#7f1d1d;max-width:820px}
+.stat{text-align:center;padding:16px 10px;border-radius:14px;background:#fff;border:1px solid var(--border)}
+.stat b{display:block;font-size:1.5rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:.79rem;color:var(--muted);font-weight:600}
+
+.topic-card{position:relative;cursor:pointer;overflow:hidden;display:flex;flex-direction:column;gap:10px}
+.topic-card .num{position:absolute;right:-8px;top:-18px;font-size:5rem;font-weight:900;color:rgba(220,38,38,.09);line-height:1;pointer-events:none}
+.topic-card h3{font-size:1.02rem;max-width:88%}
+.topic-card .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.pill{font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(220,38,38,.06);border:1px solid var(--border);color:var(--muted)}
+.pill.ok{background:rgba(22,163,74,.14);border-color:rgba(22,163,74,.4);color:#15803d}
+
+.block{border-radius:16px;padding:18px 20px;margin-bottom:14px;background:var(--panel);border:1px solid var(--border)}
+.block h3{margin-bottom:10px;display:flex;align-items:center;gap:9px;color:#1a1a2e}
+.block p+p{margin-top:10px}
+.block ul{margin:8px 0 0 20px;color:#4b5563}
+.block li{margin-bottom:7px}
+.block.remember{background:rgba(202,138,4,.08);border-color:rgba(202,138,4,.3)}
+.block.remember h3{color:#a16207}
+.block.example{background:rgba(220,38,38,.06);border-color:rgba(220,38,38,.26)}
+.block.example h3{color:#b91c1c}
+.block.conclusion{background:linear-gradient(135deg,rgba(220,38,38,.12),rgba(153,27,27,.12));border-color:rgba(153,27,27,.35)}
+.block.conclusion h3{color:#991b1b}
+.concept-grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:6px}
+.concept{background:#fff;border:1px solid var(--border);border-radius:12px;padding:12px 14px}
+.concept b{display:block;color:var(--red);font-size:.87rem;margin-bottom:3px}
+.concept span{font-size:.88rem;color:#4b5563}
+
+.svg-box{margin:16px 0;padding:18px;background:#fff;border:1.5px solid var(--border);border-radius:16px;overflow-x:auto;box-shadow:0 6px 20px -12px rgba(220,38,38,.25)}
+.svg-box h4{margin-bottom:12px;color:#991b1b;font-size:.92rem;font-weight:800;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.4px}
+.svg-box h4::before{content:"";width:5px;height:18px;background:var(--grad);border-radius:3px;display:inline-block}
+.svg-box svg{width:100%;height:auto;display:block;min-width:560px}
+
+/* AI VIDEO */
+.ai-video-box{margin:20px 0;padding:20px;background:linear-gradient(135deg,rgba(239,68,68,.08),rgba(153,27,27,.05));border:1.5px solid var(--border-2);border-radius:18px;box-shadow:0 10px 28px -14px rgba(220,38,38,.4)}
+.ai-video-box h4{margin-bottom:14px;color:#991b1b;font-size:.95rem;font-weight:800;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.4px}
+.ai-video-box h4::before{content:"🤖";font-size:1.1rem}
+.ai-video-player{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;background:#1a1a2e;box-shadow:0 8px 24px -12px rgba(0,0,0,.5)}
+.ai-video-player video{position:absolute;top:0;left:0;width:100%;height:100%;display:block;background:#000}
+.ai-video-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px;gap:8px}
+.ai-video-fallback .icon{font-size:3rem;opacity:.5}
+.ai-video-fallback b{font-size:1rem}
+.ai-video-fallback small{font-size:.78rem;opacity:.7;max-width:360px}
+.ai-video-box .ai-video-desc{margin-top:12px;font-size:.86rem;color:#4b5563;line-height:1.6}
+.ai-video-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(22,163,74,.15);color:#15803d;border:1px solid rgba(22,163,74,.4);padding:3px 10px;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-left:auto}
+
+.video-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.video-card{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.video-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -18px rgba(220,38,38,.35);border-color:var(--border-2)}
+.video-frame{position:relative;padding-bottom:56.25%;height:0;background:#1a1a2e;overflow:hidden}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-info{padding:14px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.video-info b{font-size:.95rem;color:#1a1a2e}
+.video-info span{font-size:.82rem;color:var(--muted)}
+.video-info .meta{font-size:.72rem;color:#dc2626;font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-top:auto}
+
+.photo-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.photo-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--border);cursor:pointer;transition:.3s;background:#f5f5f7}
+.photo-card:hover{transform:scale(1.02);box-shadow:0 22px 45px -18px rgba(220,38,38,.45);border-color:var(--red)}
+.photo-card img{width:100%;height:230px;object-fit:cover;display:block;transition:.4s}
+.photo-card:hover img{transform:scale(1.08)}
+.photo-card .caption{position:absolute;bottom:0;left:0;right:0;padding:14px 16px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff;font-size:.85rem;font-weight:600;line-height:1.4}
+.photo-card .caption b{display:block;font-size:.95rem;margin-bottom:2px}
+
+.qr-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.qr-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;text-align:center;transition:.25s;display:flex;flex-direction:column;align-items:center;gap:6px}
+.qr-card:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:0 16px 32px -16px rgba(220,38,38,.4)}
+.qr-card img{width:100%;max-width:150px;height:auto;border-radius:10px;margin-bottom:6px;background:#fff;padding:6px;border:1px solid var(--border)}
+.qr-card b{display:block;font-size:.86rem;color:#991b1b;line-height:1.3}
+.qr-card span{font-size:.74rem;color:var(--muted);display:block;line-height:1.3}
+.qr-card a{font-size:.78rem;color:#dc2626;text-decoration:none;font-weight:700;margin-top:auto}
+.qr-card a:hover{text-decoration:underline}
+
+.qr-inline{margin:20px 0;padding:18px;background:linear-gradient(135deg,rgba(239,68,68,.06),rgba(153,27,27,.06));border:1.5px solid var(--border);border-radius:16px}
+.qr-inline h4{margin-bottom:14px;color:#991b1b;font-size:.92rem;font-weight:800;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.4px}
+.qr-inline h4::before{content:"";width:5px;height:18px;background:var(--grad);border-radius:3px;display:inline-block}
+.qr-inline-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.qr-mini{background:#fff;border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center;transition:.2s;display:flex;flex-direction:column;align-items:center;gap:5px}
+.qr-mini:hover{border-color:var(--red);transform:translateY(-2px)}
+.qr-mini img{width:100%;max-width:110px;border-radius:8px;background:#fff;padding:4px;border:1px solid var(--border)}
+.qr-mini b{font-size:.76rem;color:#991b1b;line-height:1.3;display:block}
+.qr-mini a{font-size:.7rem;color:#dc2626;text-decoration:none;font-weight:700}
+.qr-mini a:hover{text-decoration:underline}
+
+.media-section{margin-bottom:34px}
+.media-section h2{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.media-section h2 .ico-sq{width:38px;height:38px;border-radius:12px;background:var(--grad);display:grid;place-items:center;color:#fff;font-size:1.1rem;box-shadow:0 8px 18px -8px rgba(220,38,38,.7)}
+.media-section > p{margin-bottom:18px;color:var(--muted)}
+
+.tool-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.tool-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;transition:.2s;display:flex;flex-direction:column;gap:6px}
+.tool-card:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(220,38,38,.35)}
+.tool-card .ttl{font-weight:800;color:#991b1b;font-size:.95rem;display:flex;align-items:center;gap:8px}
+.tool-card .ttl .ic{width:28px;height:28px;border-radius:8px;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:.9rem}
+.tool-card .desc{font-size:.82rem;color:#4b5563;line-height:1.5}
+.tool-card a{font-size:.78rem;color:#dc2626;text-decoration:none;font-weight:700;margin-top:auto}
+.tool-card a:hover{text-decoration:underline}
+
+.task{border-radius:16px;padding:20px;margin-bottom:16px;background:linear-gradient(160deg,rgba(220,38,38,.06),rgba(255,255,255,.75));border:1px solid rgba(220,38,38,.26)}
+.task-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
+.task-head .ico{width:38px;height:38px;flex:0 0 38px;border-radius:12px;display:grid;place-items:center;background:var(--grad);font-size:1.05rem;color:#fff;box-shadow:0 0 20px rgba(220,38,38,.4)}
+.item-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid var(--border);border-radius:12px;padding:11px 14px;margin-bottom:8px}
+.item-row .txt{flex:1;min-width:150px;font-size:.92rem;color:#1a1a2e}
+.item-row select,.item-row input[type=text]{background:#fff;border:1px solid var(--border-2);color:var(--txt);border-radius:9px;padding:8px 11px;font-family:inherit;font-size:.86rem;outline:none;min-width:150px}
+.item-row select:focus,.item-row input:focus{border-color:var(--red)}
+.item-row.correct{border-color:rgba(22,163,74,.6);background:rgba(22,163,74,.07)}
+.item-row.wrong{border-color:rgba(220,38,38,.6);background:rgba(220,38,38,.07)}
+.match-left{flex:0 0 auto;min-width:140px;font-weight:600;font-size:.9rem;color:#991b1b}
+.tf-btns{display:flex;gap:8px}
+.tf-btns button{background:#fff;border:1px solid var(--border-2);color:var(--txt);padding:7px 15px;border-radius:9px;cursor:pointer;font-family:inherit;font-size:.83rem;font-weight:700;transition:.18s}
+.tf-btns button:hover{border-color:var(--red)}
+.tf-btns button.sel{background:linear-gradient(135deg,#ef4444,#991b1b);border-color:transparent;color:#fff}
+.feedback{margin-top:10px;font-size:.88rem;font-weight:600}
+.feedback.ok{color:#15803d}
+.feedback.no{color:#b91c1c}
+.order-num{width:30px;height:30px;flex:0 0 30px;border-radius:9px;display:grid;place-items:center;background:rgba(220,38,38,.1);color:#991b1b;font-weight:800;font-size:.85rem}
+.mini-btn{background:#fff;border:1px solid var(--border);color:var(--txt);width:30px;height:30px;border-radius:8px;cursor:pointer;font-size:.9rem;line-height:1;transition:.18s}
+.mini-btn:hover{background:rgba(220,38,38,.12);border-color:var(--red)}
+
+.q{border-radius:15px;padding:18px;margin-bottom:14px;background:#fff;border:1px solid var(--border);transition:.25s}
+.q.correct{border-color:rgba(22,163,74,.65);background:rgba(22,163,74,.06)}
+.q.wrong{border-color:rgba(220,38,38,.65);background:rgba(220,38,38,.06)}
+.q-head{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px}
+.q-num{width:30px;height:30px;flex:0 0 30px;border-radius:9px;display:grid;place-items:center;background:var(--grad);color:#fff;font-weight:900;font-size:.83rem}
+.q-text{font-weight:600;font-size:.96rem;flex:1;color:#1a1a2e}
+.opt{display:flex;gap:11px;align-items:flex-start;padding:10px 13px;border-radius:11px;border:1px solid var(--border);background:rgba(220,38,38,.03);margin-bottom:8px;cursor:pointer;transition:.18s;font-size:.91rem}
+.opt:hover{border-color:var(--red);background:rgba(220,38,38,.07)}
+.opt input{margin-top:4px;accent-color:#dc2626;width:16px;height:16px;flex:0 0 16px}
+.opt input:checked ~ span{color:#1a1a2e;font-weight:600}
+.explain{margin-top:10px;padding:10px 13px;border-radius:10px;font-size:.85rem;background:rgba(220,38,38,.05);border-left:3px solid var(--red);color:#4b5563}
+.level{font-size:.68rem;padding:2px 8px;border-radius:999px;font-weight:800;letter-spacing:.4px}
+.level.green{background:rgba(22,163,74,.18);color:#15803d;border:1px solid rgba(22,163,74,.4)}
+.level.yellow{background:rgba(202,138,4,.16);color:#854d0e;border:1px solid rgba(202,138,4,.4)}
+.level.red{background:rgba(220,38,38,.16);color:#991b1b;border:1px solid rgba(220,38,38,.4)}
+
+.result{border-radius:20px;padding:26px;margin-top:20px;background:linear-gradient(150deg,rgba(239,68,68,.14),rgba(153,27,27,.12));border:1px solid var(--border-2);animation:pop .45s cubic-bezier(.2,1.2,.4,1)}
+@keyframes pop{from{opacity:0;transform:scale(.96) translateY(12px)}to{opacity:1;transform:none}}
+.score-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin:18px 0}
+.score-box{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px;text-align:center}
+.score-box b{display:block;font-size:1.35rem;color:#991b1b}
+.score-box span{font-size:.76rem;color:var(--muted);font-weight:600}
+.bar{height:12px;border-radius:999px;background:rgba(220,38,38,.1);overflow:hidden;border:1px solid var(--border)}
+.bar i{display:block;height:100%;background:var(--grad);border-radius:999px;transition:width .7s cubic-bezier(.4,0,.2,1)}
+
+.field{margin-bottom:15px}
+.field label{display:block;font-size:.85rem;font-weight:700;margin-bottom:7px;color:#374151}
+.field input[type=text],.field textarea,.field select{width:100%;background:#fff;border:1px solid var(--border-2);color:var(--txt);border-radius:12px;padding:12px 14px;font-family:inherit;font-size:.9rem;outline:none;transition:.2s;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(220,38,38,.12)}
+.field textarea{min-height:88px;line-height:1.6}
+
+.project-card{border-radius:22px;overflow:hidden;border:1px solid var(--border-2);background:linear-gradient(155deg,rgba(239,68,68,.12),rgba(153,27,27,.1));animation:pop .5s cubic-bezier(.2,1.2,.4,1)}
+.project-card .pc-head{padding:26px;background:linear-gradient(135deg,rgba(239,68,68,.18),rgba(153,27,27,.16));border-bottom:1px solid var(--border)}
+.project-card .pc-body{padding:24px;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.pc-item{background:#fff;border:1px solid var(--border);border-radius:13px;padding:14px}
+.pc-item b{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:var(--red);margin-bottom:6px}
+.pc-item span{font-size:.9rem;color:#4b5563;white-space:pre-wrap}
+
+#toast{position:fixed;right:20px;bottom:20px;z-index:999;display:flex;flex-direction:column;gap:10px}
+.toast{background:linear-gradient(135deg,rgba(220,38,38,.97),rgba(153,27,27,.95));color:#fff;padding:13px 20px;border-radius:14px;font-weight:800;font-size:.88rem;box-shadow:0 16px 40px -12px rgba(220,38,38,.7);animation:slideIn .4s cubic-bezier(.2,1.2,.4,1);max-width:320px}
+@keyframes slideIn{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:none}}
+
+@media (max-width:720px){
+.nav-links{margin-left:0;width:100%;overflow-x:auto;padding-bottom:4px}
+.nav-links button{font-size:.8rem;padding:7px 11px}
+.wrap{padding:20px 13px 80px}
+.card{padding:18px;border-radius:15px}
+.hero{padding:26px 20px;border-radius:20px}
+.match-left{min-width:100%}
+.item-row select{width:100%}
+.photo-card img{height:180px}
+.qr-card img{max-width:120px}
+.qr-mini img{max-width:90px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+    <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ef4444"/><stop offset="1" stop-color="#991b1b"/></linearGradient>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand" onclick="go('home')">
+      <div class="logo">🧠</div>
+      <div>AI <span class="grad">Startup</span></div>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <button data-nav="home" onclick="go('home')">Басты бет</button>
+      <button data-nav="topics" onclick="go('topics')">Тақырыптар</button>
+      <button data-nav="media" onclick="go('media')">🎬 Медиатека</button>
+      <button data-nav="general" onclick="go('general')">Жалпы тест</button>
+      <button data-nav="project" onclick="go('project')">IT Startup жобасы</button>
+      <button data-nav="conclusion" onclick="go('conclusion')">Қорытынды</button>
+    </nav>
+  </div>
+  <div class="nav-progress"><i id="navBar"></i></div>
+</header>
+
+<main id="app" class="wrap"></main>
+<div id="toast"></div>
+
+<script>
+/* ============== SVG СХЕМАЛАР ============== */
+const SVG_AI_FLOW = '<svg viewBox="0 0 820 130" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+'<rect x="15" y="35" width="190" height="64" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>'+
+'<text x="110" y="62" text-anchor="middle" font-size="14" font-weight="700" fill="#991b1b">📊 ДЕРЕКТЕР</text>'+
+'<text x="110" y="84" text-anchor="middle" font-size="11" fill="#6b7280">үлгілер жинағы</text>'+
+'<line x1="210" y1="67" x2="300" y2="67" stroke="#dc2626" stroke-width="2" marker-end="url(#arw)"/>'+
+'<rect x="310" y="35" width="190" height="64" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>'+
+'<text x="405" y="62" text-anchor="middle" font-size="14" font-weight="700" fill="#991b1b">⚙️ АЛГОРИТМ</text>'+
+'<text x="405" y="84" text-anchor="middle" font-size="11" fill="#6b7280">заңдылық іздеу</text>'+
+'<line x1="505" y1="67" x2="595" y2="67" stroke="#dc2626" stroke-width="2" marker-end="url(#arw)"/>'+
+'<rect x="605" y="35" width="200" height="64" rx="14" fill="url(#gA)"/>'+
+'<text x="705" y="62" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">🧠 МОДЕЛЬ</text>'+
+'<text x="705" y="84" text-anchor="middle" font-size="11" fill="#ffe4e4">болжам шығарады</text>'+
+'</svg>';
+
+const SVG_AI_HISTORY = '<svg viewBox="0 0 900 160" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+'<line x1="40" y1="90" x2="860" y2="90" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>'+
+[['1950','Тьюринг','#f87171'],['1956','Дартмут','#ef4444'],['1980','Эксперттік','#dc2626'],['2000','Машиналық оқыту','#b91c1c'],['2010+','Терең оқыту','#991b1b']].map((s,i)=>{
+  const x = 90 + i*180;
+  return '<circle cx="'+x+'" cy="90" r="12" fill="'+s[2]+'" stroke="#ffffff" stroke-width="3"/>'+
+    '<text x="'+x+'" y="55" text-anchor="middle" font-size="12" font-weight="800" fill="#991b1b">'+s[0]+'</text>'+
+    '<text x="'+x+'" y="128" text-anchor="middle" font-size="11" fill="#4b5563">'+s[1]+'</text>';
+}).join("")+'</svg>';
+
+const SVG_AI_TASKS = '<svg viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+[['👁️','Қабылдау','сурет · дыбыс · мәтін'],['💬','Түсіну','тіл мағынасы'],['📚','Үйрену','заңдылық табу'],['🎯','Шешім шығару','болжам · баға'],['⚙️','Әрекет','басқару · орындау']].map((s,i)=>{
+  const x = 20 + i*176;
+  return '<rect x="'+x+'" y="45" width="160" height="115" rx="16" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>'+
+    '<text x="'+(x+80)+'" y="90" text-anchor="middle" font-size="30">'+s[0]+'</text>'+
+    '<text x="'+(x+80)+'" y="118" text-anchor="middle" font-size="14" font-weight="800" fill="#991b1b">'+s[1]+'</text>'+
+    '<text x="'+(x+80)+'" y="138" text-anchor="middle" font-size="10" fill="#6b7280">'+s[2]+'</text>'+
+    (i<4 ? '<line x1="'+(x+162)+'" y1="102" x2="'+(x+174)+'" y2="102" stroke="#dc2626" stroke-width="2" marker-end="url(#arw)"/>' : '');
+}).join("")+'</svg>';
+
+const SVG_AI_FIELDS = '<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+[['🏥','Медицина','ауруды ерте табу'],['🎓','Білім','жеке бағдарлама'],['💰','Қаржы','алаяқтықты анықтау'],['🚗','Көлік','автопилот'],['🏭','Өнеркәсіп','сапаны бақылау'],['🛡️','Қауіпсіздік','бет-әлпетті тану']].map((s,i)=>{
+  const col = i % 3, row = Math.floor(i/3);
+  const x = 30 + col*290, y = 20 + row*140;
+  return '<rect x="'+x+'" y="'+y+'" width="260" height="120" rx="16" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>'+
+    '<text x="'+(x+130)+'" y="'+(y+58)+'" text-anchor="middle" font-size="38">'+s[0]+'</text>'+
+    '<text x="'+(x+130)+'" y="'+(y+88)+'" text-anchor="middle" font-size="16" font-weight="800" fill="#991b1b">'+s[1]+'</text>'+
+    '<text x="'+(x+130)+'" y="'+(y+108)+'" text-anchor="middle" font-size="11" fill="#4b5563">'+s[2]+'</text>';
+}).join("")+'</svg>';
+
+const SVG_AI_PROS_CONS = '<svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+'<rect x="20" y="20" width="420" height="280" rx="18" fill="rgba(22,163,74,0.08)" stroke="#16a34a" stroke-width="2"/>'+
+'<text x="230" y="62" text-anchor="middle" font-size="19" font-weight="800" fill="#15803d">✅ Артықшылықтар</text>'+
+[['⚡','Жоғары жылдамдық'],['🎯','Жоғары дәлдік'],['🕐','Тәулік бойы жұмыс'],['📊','Үлкен деректерді өңдеу']].map((s,i)=>
+  '<rect x="50" y="'+(85+i*50)+'" width="360" height="40" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1" opacity="0.85"/>'+
+  '<text x="75" y="'+(112+i*50)+'" font-size="20">'+s[0]+'</text>'+
+  '<text x="115" y="'+(112+i*50)+'" font-size="14" font-weight="700" fill="#1a1a2e">'+s[1]+'</text>'
+).join("")+
+'<rect x="460" y="20" width="420" height="280" rx="18" fill="rgba(220,38,38,0.08)" stroke="#dc2626" stroke-width="2"/>'+
+'<text x="670" y="62" text-anchor="middle" font-size="19" font-weight="800" fill="#991b1b">⚠️ Шектеулер</text>'+
+[['📉','Деректерге тәуелділік'],['⚖️','Этикалық мәселелер'],['🔒','Жеке өмір қауіпсіздігі'],['💸','Қымбат ресурстар']].map((s,i)=>
+  '<rect x="490" y="'+(85+i*50)+'" width="360" height="40" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="1" opacity="0.85"/>'+
+  '<text x="515" y="'+(112+i*50)+'" font-size="20">'+s[0]+'</text>'+
+  '<text x="555" y="'+(112+i*50)+'" font-size="14" font-weight="700" fill="#1a1a2e">'+s[1]+'</text>'
+).join("")+'</svg>';
+
+const SVG_STARTUP_FEATURES = '<svg viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+[['💻','Цифрлық өнім','бағдарламалық жасақтама'],['⚡','Жылдам даму','жоғары темп'],['🌍','Кең аудитория','оңай масштабтау'],['💰','Инвестиция','тарту мүмкіндігі'],['⚠️','Жоғары тәуекел','белгісіздік']].map((s,i)=>{
+  const x = 20 + i*176;
+  return '<rect x="'+x+'" y="40" width="165" height="145" rx="16" fill="url(#gA)"/>'+
+    '<text x="'+(x+82)+'" y="92" text-anchor="middle" font-size="34">'+s[0]+'</text>'+
+    '<text x="'+(x+82)+'" y="126" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">'+s[1]+'</text>'+
+    '<text x="'+(x+82)+'" y="148" text-anchor="middle" font-size="10" fill="#ffe4e4">'+s[2]+'</text>'+
+    (i<4 ? '<line x1="'+(x+167)+'" y1="112" x2="'+(x+175)+'" y2="112" stroke="#dc2626" stroke-width="2" marker-end="url(#arw)"/>' : '');
+}).join("")+'</svg>';
+
+const SVG_ML_TYPES = '<svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+'<rect x="355" y="10" width="190" height="50" rx="12" fill="url(#gA)"/>'+
+'<text x="450" y="42" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">📊 МАШИНАЛЫҚ ОҚЫТУ</text>'+
+'<line x1="450" y1="60" x2="450" y2="90" stroke="#dc2626" stroke-width="2"/>'+
+'<line x1="150" y1="90" x2="750" y2="90" stroke="#dc2626" stroke-width="2"/>'+
+'<line x1="150" y1="90" x2="150" y2="120" stroke="#dc2626" stroke-width="2" marker-end="url(#arw)"/>'+
+'<line x1="450" y1="90" x2="450" y2="120" stroke="#dc2626" stroke-width="2" marker-end="url(#arw)"/>'+
+'<line x1="750" y1="90" x2="750" y2="120" stroke="#dc2626" stroke-width="2" marker-end="url(#arw)"/>'+
+'<rect x="30" y="130" width="240" height="110" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>'+
+'<text x="150" y="158" text-anchor="middle" font-size="13" font-weight="800" fill="#991b1b">🎯 Бақыланатын</text>'+
+'<text x="150" y="182" text-anchor="middle" font-size="11" fill="#4b5563">жауап белгілі</text>'+
+'<text x="150" y="202" text-anchor="middle" font-size="11" fill="#4b5563">үлгі — жауап</text>'+
+'<text x="150" y="222" text-anchor="middle" font-size="11" fill="#991b1b">жіктеу · регрессия</text>'+
+'<rect x="330" y="130" width="240" height="110" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>'+
+'<text x="450" y="158" text-anchor="middle" font-size="13" font-weight="800" fill="#991b1b">🔍 Бақыланбайтын</text>'+
+'<text x="450" y="182" text-anchor="middle" font-size="11" fill="#4b5563">жауап жоқ</text>'+
+'<text x="450" y="202" text-anchor="middle" font-size="11" fill="#4b5563">құрылымды өзі табады</text>'+
+'<text x="450" y="222" text-anchor="middle" font-size="11" fill="#991b1b">кластерлеу</text>'+
+'<rect x="630" y="130" width="240" height="110" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>'+
+'<text x="750" y="158" text-anchor="middle" font-size="13" font-weight="800" fill="#991b1b">🎮 Күшейту</text>'+
+'<text x="750" y="182" text-anchor="middle" font-size="11" fill="#4b5563">марапат/айыппұл</text>'+
+'<text x="750" y="202" text-anchor="middle" font-size="11" fill="#4b5563">стратегия үйрену</text>'+
+'<text x="750" y="222" text-anchor="middle" font-size="11" fill="#991b1b">ойын AI · робот</text>'+
+'</svg>';
+
+const SVG_TRAIN_TEST = '<svg viewBox="0 0 820 130" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+'<text x="410" y="20" text-anchor="middle" font-size="13" font-weight="800" fill="#991b1b">ДЕРЕКТЕР ЖИНАҒЫ (100%)</text>'+
+'<rect x="30" y="35" width="530" height="70" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>'+
+'<text x="295" y="68" text-anchor="middle" font-size="15" font-weight="800" fill="#991b1b">📚 ОҚЫТУ БӨЛІГІ (70–80%)</text>'+
+'<text x="295" y="88" text-anchor="middle" font-size="11" fill="#7f1d1d">модель осы жерде жаттығады</text>'+
+'<rect x="570" y="35" width="220" height="70" rx="12" fill="url(#gA)"/>'+
+'<text x="680" y="68" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">🧪 ТЕКСЕРУ (20–30%)</text>'+
+'<text x="680" y="88" text-anchor="middle" font-size="11" fill="#ffe4e4">дәлдікті сынаймыз</text>'+
+'</svg>';
+
+const SVG_NEURON = '<svg viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+[['x₁',30],['x₂',80],['x₃',130]].map((p,i)=>{
+  return '<circle cx="60" cy="'+(p[1]+30)+'" r="20" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>'+
+    '<text x="60" y="'+(p[1]+35)+'" text-anchor="middle" font-size="13" font-weight="700" fill="#991b1b">'+p[0]+'</text>';
+}).join("")+
+'<text x="60" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="#6b7280">КІРІСТЕР</text>'+
+[['w₁',90],['w₂',140],['w₃',190]].map((p,i)=>
+  '<text x="200" y="'+p[1]+'" text-anchor="middle" font-size="12" font-weight="700" fill="#dc2626">'+p[0]+'</text>'+
+  '<line x1="90" y1="'+(60+i*50)+'" x2="280" y2="120" stroke="#dc2626" stroke-width="1.5" opacity="0.6"/>'
+).join("")+
+'<circle cx="330" cy="120" r="42" fill="url(#gA)"/>'+
+'<text x="330" y="118" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">Σ + b</text>'+
+'<text x="330" y="136" text-anchor="middle" font-size="10" fill="#ffe4e4">қосынды</text>'+
+'<line x1="375" y1="120" x2="445" y2="120" stroke="#dc2626" stroke-width="2" marker-end="url(#arw)"/>'+
+'<rect x="455" y="90" width="150" height="60" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>'+
+'<text x="530" y="118" text-anchor="middle" font-size="13" font-weight="800" fill="#991b1b">f( ) белсендіру</text>'+
+'<text x="530" y="136" text-anchor="middle" font-size="10" fill="#6b7280">ReLU · sigmoid</text>'+
+'<line x1="610" y1="120" x2="700" y2="120" stroke="#dc2626" stroke-width="2" marker-end="url(#arw)"/>'+
+'<circle cx="740" cy="120" r="32" fill="url(#gA)"/>'+
+'<text x="740" y="126" text-anchor="middle" font-size="18" font-weight="800" fill="#ffffff">y</text>'+
+'<text x="740" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#6b7280">ШЫҒЫС</text>'+
+'</svg>';
+
+const SVG_NN_LAYERS = '<svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+[3,4,4,2].map((cnt,li)=>{
+  const x = 130 + li*220;
+  let s = "";
+  for(let i=0;i<cnt;i++){
+    const y = 130 - (cnt-1)*25 + i*50;
+    const color = li===0 ? "#f87171" : li===3 ? "#991b1b" : "#dc2626";
+    s += '<circle cx="'+x+'" cy="'+y+'" r="18" fill="'+color+'" opacity="0.85"/>';
+    if(li<3){
+      const nc = 4;
+      for(let j=0;j<nc;j++){
+        const ny = 130 - (nc-1)*25 + j*50;
+        s += '<line x1="'+(x+18)+'" y1="'+y+'" x2="'+(x+220-18)+'" y2="'+ny+'" stroke="#fca5a5" stroke-width="0.8" opacity="0.35"/>';
+      }
+    }
+  }
+  return s;
+}).join("")+
+'<text x="130" y="30" text-anchor="middle" font-size="12" font-weight="800" fill="#991b1b">КІРІС</text>'+
+'<text x="350" y="30" text-anchor="middle" font-size="12" font-weight="800" fill="#991b1b">ЖАСЫРЫН 1</text>'+
+'<text x="570" y="30" text-anchor="middle" font-size="12" font-weight="800" fill="#991b1b">ЖАСЫРЫН 2</text>'+
+'<text x="790" y="30" text-anchor="middle" font-size="12" font-weight="800" fill="#991b1b">ШЫҒЫС</text>'+
+'<text x="130" y="240" text-anchor="middle" font-size="10" fill="#6b7280">деректер</text>'+
+'<text x="350" y="240" text-anchor="middle" font-size="10" fill="#6b7280">белгілер</text>'+
+'<text x="570" y="240" text-anchor="middle" font-size="10" fill="#6b7280">күрделі белгілер</text>'+
+'<text x="790" y="240" text-anchor="middle" font-size="10" fill="#6b7280">болжам</text>'+
+'</svg>';
+
+const SVG_NN_DESIGN = '<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+[['1. Мәселені айқындау','#ef4444'],['2. Деректерді жинау','#dc2626'],['3. Деректерді өңдеу','#dc2626'],['4. Архитектура таңдау','#b91c1c'],['5. Модельді оқыту','#991b1b'],['6. Сынау және бағалау','#991b1b'],['7. Модельді жетілдіру','#7f1d1d']].map((s,i)=>{
+  const y = 20 + i*52;
+  return '<rect x="180" y="'+y+'" width="540" height="42" rx="11" fill="'+s[1]+'" opacity="0.92"/>'+
+    '<text x="450" y="'+(y+27)+'" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">'+s[0]+'</text>'+
+    (i<6 ? '<line x1="450" y1="'+(y+42)+'" x2="450" y2="'+(y+52)+'" stroke="#dc2626" stroke-width="2"/>' : '');
+}).join("")+
+'<path d="M 720 62 L 780 62 L 780 350 L 720 350" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arw)"/>'+
+'<text x="810" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#991b1b" transform="rotate(90 810 210)">ЦИКЛДІ ҚАЙТАЛАУ</text>'+
+'</svg>';
+
+const SVG_STARTUP = '<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+[['💡','Идея','Мәселені айқындау'],['🔍','Зерттеу','Аудитория + нарық'],['🧪','MVP','Ең қарапайым өнім'],['👥','Алғашқы клиент','Кері байланыс'],['📈','Өсу','Масштабтау']].map((s,i)=>{
+  const x = 60 + i*170;
+  return '<circle cx="'+x+'" cy="130" r="45" fill="url(#gA)"/>'+
+    '<text x="'+x+'" y="125" text-anchor="middle" font-size="24">'+s[0]+'</text>'+
+    '<text x="'+x+'" y="148" text-anchor="middle" font-size="11" font-weight="700" fill="#ffe4e4">'+(i+1)+'-қадам</text>'+
+    '<text x="'+x+'" y="205" text-anchor="middle" font-size="14" font-weight="800" fill="#991b1b">'+s[1]+'</text>'+
+    '<text x="'+x+'" y="225" text-anchor="middle" font-size="11" fill="#4b5563">'+s[2]+'</text>'+
+    (i<4 ? '<line x1="'+(x+47)+'" y1="130" x2="'+(x+123)+'" y2="130" stroke="#dc2626" stroke-width="2" marker-end="url(#arw)"/>' : '');
+}).join("")+'</svg>';
+
+const SVG_4P = '<svg viewBox="0 0 820 260" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+'<circle cx="410" cy="130" r="55" fill="url(#gA)"/>'+
+'<text x="410" y="125" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">МАРКЕТИНГ</text>'+
+'<text x="410" y="145" text-anchor="middle" font-size="13" font-weight="800" fill="#ffe4e4">4P</text>'+
+[['Product','Өнім',110,60],['Price','Баға',710,60],['Place','Орын',110,200],['Promotion','Жылжыту',710,200]].map(p=>{
+  return '<rect x="'+(p[2]-85)+'" y="'+(p[3]-35)+'" width="170" height="70" rx="13" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>'+
+    '<text x="'+p[2]+'" y="'+(p[3]-8)+'" text-anchor="middle" font-size="13" font-weight="800" fill="#991b1b">'+p[0]+'</text>'+
+    '<text x="'+p[2]+'" y="'+(p[3]+13)+'" text-anchor="middle" font-size="12" fill="#4b5563">'+p[1]+'</text>'+
+    '<line x1="410" y1="130" x2="'+p[2]+'" y2="'+p[3]+'" stroke="#dc2626" stroke-width="1.5" opacity="0.5"/>';
+}).join("")+'</svg>';
+
+const SVG_AIDA = '<svg viewBox="0 0 780 300" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+[['A','Attention — Назар аудару','#f87171',320],['I','Interest — Қызығушылық','#ef4444',250],['D','Desire — Қалау','#dc2626',180],['A','Action — Әрекет','#991b1b',110]].map((s,i)=>{
+  const y = 30 + i*60;
+  return '<polygon points="'+(390-s[3]/2)+','+y+' '+(390+s[3]/2)+','+y+' '+(390+s[3]/2-30)+','+(y+50)+' '+(390-s[3]/2+30)+','+(y+50)+'" fill="'+s[2]+'"/>'+
+    '<text x="390" y="'+(y+32)+'" text-anchor="middle" font-size="16" font-weight="800" fill="#ffffff">'+s[0]+' · '+s[1].split(' — ')[1]+'</text>';
+}).join("")+
+'<text x="390" y="290" text-anchor="middle" font-size="11" fill="#6b7280">жарнама әсерінің классикалық моделі</text>'+
+'</svg>';
+
+const SVG_AD_STRUCT = '<svg viewBox="0 0 820 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+[['🎯','Slogan','Қысқа есте қаларлық'],['📝','Мәтін','Мәселе + шешім + пайда'],['🖼️','Визуал','Сурет / видео / графика'],['👉','CTA','Нақты әрекетке шақыру']].map((s,i)=>{
+  const x = 30 + i*200;
+  return '<rect x="'+x+'" y="55" width="170" height="90" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>'+
+    '<text x="'+(x+85)+'" y="90" text-anchor="middle" font-size="22">'+s[0]+'</text>'+
+    '<text x="'+(x+85)+'" y="115" text-anchor="middle" font-size="13" font-weight="800" fill="#991b1b">'+s[1]+'</text>'+
+    '<text x="'+(x+85)+'" y="133" text-anchor="middle" font-size="10" fill="#4b5563">'+s[2]+'</text>'+
+    (i<3 ? '<line x1="'+(x+172)+'" y1="100" x2="'+(x+195)+'" y2="100" stroke="#dc2626" stroke-width="2" marker-end="url(#arw)"/>' : '');
+}).join("")+'</svg>';
+
+const SVG_PROJECT = '<svg viewBox="0 0 820 340" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">'+
+[['Атауы','Мәселе','Өзектілік','Шешім'],['ЖИ','ML','Аудитория','MVP'],['Маркетинг','Жарнама','Артықшылық','Болашақ']].map((row,ri)=>
+  row.map((label,ci)=>{
+    const x = 40 + ci*190, y = 30 + ri*100;
+    return '<rect x="'+x+'" y="'+y+'" width="170" height="80" rx="13" fill="url(#gA)" opacity="'+(0.75+ri*0.08)+'"/>'+
+      '<text x="'+(x+20)+'" y="'+(y+26)+'" font-size="10" font-weight="700" fill="#ffe4e4">'+(ri*4+ci+1)+'-ПУНКТ</text>'+
+      '<text x="'+(x+85)+'" y="'+(y+52)+'" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">'+label+'</text>';
+  }).join("")
+).join("")+'</svg>';
+
+/* ============== QR + МЕДИА ============== */
+function qrImg(url, size){
+  size = size || 160;
+  return 'https://api.qrserver.com/v1/create-qr-code/?size='+size+'x'+size+'&color=991b1b&bgcolor=ffffff&margin=6&data='+encodeURIComponent(url);
+}
+
+const MEDIA = {
+  videos:[
+    {id:"v1", title:"Жасанды интеллект дегеніміз не?", desc:"5 минутта ЖИ негіздері", meta:"Кіріспе", yt:"ad79nYk2keg"},
+    {id:"v2", title:"Нейрондық желілер қалай жұмыс істейді?", desc:"3Blue1Brown түсіндірмесі", meta:"Нейрондық желі", yt:"aircAruvnKk"},
+    {id:"v3", title:"Машиналық оқыту — қысқаша шолу", desc:"ML негізгі идеялары", meta:"Машиналық оқыту", yt:"ukzFI9rgwfU"},
+    {id:"v4", title:"Startup қалай құрылады?", desc:"Идеядан MVP-ге дейін", meta:"Startup", yt:"ZoqgAy3h4OM"}
+  ],
+  aiTools:[
+    {t:"Synthesia", ic:"🎭", d:"Мәтінді AI-аватар видеосына айналдырады. 140+ тілді қолдайды.", u:"https://www.synthesia.io/"},
+    {t:"HeyGen", ic:"🎬", d:"AI-аватарлармен сөйлейтін видео жасайды. Қазақша дыбыстауға жарайды.", u:"https://www.heygen.com/"},
+    {t:"D-ID", ic:"🗣️", d:"Фотосуретті сөйлейтін AI-презентерге айналдырады.", u:"https://www.d-id.com/"},
+    {t:"Pictory", ic:"📝", d:"Мәтінді автоматты түрде видео-роликке айналдырады.", u:"https://pictory.ai/"},
+    {t:"InVideo AI", ic:"🎥", d:"Тақырып бойынша толық видео-жазба жасайды.", u:"https://invideo.io/ai/"},
+    {t:"Steve AI", ic:"🎨", d:"Анимациялық түсіндірме видеолар жасайды.", u:"https://www.steve.ai/"},
+    {t:"Runway ML", ic:"✨", d:"AI арқылы видео өңдеу және генерация жасау.", u:"https://runwayml.com/"},
+    {t:"Descript", ic:"🎙️", d:"Дауысты AI арқылы мәтінге айналдырып, видеоны өңдейді.", u:"https://www.descript.com/"}
+  ],
+  photos:[
+    {t:"Жасанды интеллект", d:"AI моделінің нейрондық торы", u:"https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"},
+    {t:"Нейрондық желілер", d:"Байланысқан нейрондар визуализациясы", u:"https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80"},
+    {t:"Код жазу", d:"ML моделінің бағдарламалауы", u:"https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80"},
+    {t:"Стартап командасы", d:"IT стартап командасының жұмысы", u:"https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80"},
+    {t:"Деректер аналитикасы", d:"Үлкен деректерді өңдеу", u:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"},
+    {t:"Технология", d:"Заманауи IT инфрақұрылымы", u:"https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80"},
+    {t:"AI робот", d:"Жасанды интеллект робототехникада", u:"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80"},
+    {t:"Маркетинг", d:"Цифрлық маркетинг және SMM", u:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"}
+  ],
+  qr:[
+    {t:"Wikipedia: Жасанды интеллект", d:"Толық мақала", u:"https://kk.wikipedia.org/wiki/Жасанды_интеллект"},
+    {t:"Wikipedia: Машиналық оқыту", d:"ML негіздері", u:"https://kk.wikipedia.org/wiki/Машиналық_оқыту"},
+    {t:"Wikipedia: Нейрондық желі", d:"Желі құрылымы", u:"https://kk.wikipedia.org/wiki/Нейрондық_желі"},
+    {t:"TensorFlow", d:"Google-дың ML платформасы", u:"https://www.tensorflow.org/"},
+    {t:"Kaggle Datasets", d:"Ашық деректер жинақтары", u:"https://www.kaggle.com/datasets"},
+    {t:"Coursera: ML", d:"Онлайн курс", u:"https://www.coursera.org/learn/machine-learning"},
+    {t:"Y Combinator", d:"Стартап акселераторы", u:"https://www.ycombinator.com/"},
+    {t:"Product Hunt", d:"Жаңа өнімдер платформасы", u:"https://www.producthunt.com/"},
+    {t:"AIDA Model", d:"Жарнама моделі", u:"https://en.wikipedia.org/wiki/AIDA_(marketing)"},
+    {t:"Synthesia", d:"AI видео генераторы", u:"https://www.synthesia.io/"},
+    {t:"Hugging Face", d:"Ашық AI модельдері", u:"https://huggingface.co/"},
+    {t:"Google AI", d:"Google AI блогы", u:"https://ai.google/"}
+  ]
+};
+
+/* ============== 8 ТАҚЫРЫП (теория қайта жазылды) ============== */
+const TOPICS = [
+{
+  id:1, title:"Жасанды интеллект – заманауи ақпараттық технологияның негізі",
+  short:"Жасанды интеллект негіздері", icon:"🤖",
+  goal:"Жасанды интеллект ұғымын, оның даму тарихын, жұмыс принципін, қолданылу аясын және қоғамдағы рөлін түсіну.",
+  aivideo:{src:"videos/topic1-ai-intro.mp4", poster:"https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80", desc:"Бұл видеода AI-аватар ЖИ-дің негізгі ұғымдарын, даму кезеңдерін және практикалық қолданысын қарапайым тілмен түсіндіреді."},
+  qr:[
+    {t:"Wikipedia: ЖИ", u:"https://kk.wikipedia.org/wiki/Жасанды_интеллект"},
+    {t:"AI негіздері (видео)", u:"https://www.youtube.com/watch?v=ad79nYk2keg"},
+    {t:"Google AI блогы", u:"https://ai.google/"}
+  ],
+  theory:[
+    {t:"h", c:"Жасанды интеллект деген не?"},
+    {t:"p", c:"Жасанды интеллект (ЖИ) деп адам баласының ойлау, қабылдау, үйрену және шешім шығару секілді ақыл-ой әрекеттерін компьютерлік жүйелер арқылы іске асыратын технологиялар тобын айтады."},
+    {t:"p", c:"Оның басты қасиеті — деректерден заңдылықты өз бетімен тауып, тың жағдайларға тез бейімделуінде."},
+    {t:"remember", c:"Кәдімгі бағдарлама нақты нұсқаумен жүреді — оған «не істе» деп айту керек. Ал ЖИ-ге «қалай үйрен» дегенді білу жетеді."},
+    {t:"svg", title:"ЖИ жұмыс принципі", svg:SVG_AI_FLOW},
+    {t:"photo", title:"ЖИ визуалды галереясы", photos:[
+      {t:"AI модельдері", d:"Нейрондық желілердің визуализациясы", u:"https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"},
+      {t:"AI робот", d:"Жасанды интеллект робототехникада", u:"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80"}
+    ]},
+    {t:"h", c:"ЖИ-дің пайда болу және даму кезеңдері"},
+    {t:"svg", title:"ЖИ даму хронологиясы", svg:SVG_AI_HISTORY},
+    {t:"list", c:[
+      "1950 — Алан Тьюринг «Машина ойлай ала ма?» деген мақаласын жарыққа шығарды.",
+      "1956 — Дартмут конференциясында «жасанды интеллект» деген атау пайда болды.",
+      "1960–1980 — тұңғыш эксперттік жүйелер жасалды.",
+      "1990–2000 — машиналық оқыту әдістері дами бастады.",
+      "2010 жылдан бері — терең оқыту (Deep Learning) дәуірі басталды."
+    ]},
+    {t:"h", c:"ЖИ алдында тұрған негізгі міндеттер"},
+    {t:"svg", title:"ЖИ-дің 5 негізгі міндеті", svg:SVG_AI_TASKS},
+    {t:"h", c:"Деректер, алгоритм және модель"},
+    {t:"p", c:"Деректер — ЖИ-дің отыны. Алгоритм — қадамдар тізбегі. Ал модель — үйрену барысында қалыптасқан математикалық құрылым."},
+    {t:"example", c:"Ауа райын болжайтын модель температура, ылғалдылық, жел деректерінен заңдылық тауып, ертеңгі болжам шығарады."},
+    {t:"h", c:"ЖИ қолданылатын салалар"},
+    {t:"svg", title:"ЖИ қолданылатын 6 негізгі сала", svg:SVG_AI_FIELDS},
+    {t:"h", c:"ЖИ: пайдасы мен шектеулері"},
+    {t:"svg", title:"ЖИ: артықшылықтар мен шектеулер", svg:SVG_AI_PROS_CONS},
+    {t:"h", c:"ЖИ-дің қоғамдағы рөлі"},
+    {t:"p", c:"ЖИ экономиканы, білім беруді, медицинаны өзгертіп, жаңа мамандықтар тудырып жатыр. Технологияны саналы қолдану — бүгінгі күннің талабы."},
+    {t:"conclusion", c:"ЖИ — деректер мен алгоритмге негізделген, өз бетімен үйренетін жүйе. ЖИ-ді түсіну — болашақ IT маманының алғашқы баспалдағы."}
+  ],
+  tasks:[
+    {type:"sort", icon:"🗂️", title:"«ЖИ немесе ЖИ емес?»", instruction:"Әр элементті дұрыс санатқа жатқыз.",
+      buckets:["Жасанды интеллект","ЖИ емес"],
+      items:[
+        {text:"Дауыс арқылы сұраққа жауап беретін көмекші (Siri, Alexa)", b:0},
+        {text:"Қарапайым калькулятор", b:1},
+        {text:"Клиенттерге автоматты жауап беретін чат-бот", b:0},
+        {text:"Электрондық кестедегі қосу формуласы", b:1},
+        {text:"Фильм ұсынатын Netflix жүйесі", b:0},
+        {text:"Механикалық қабырға сағаты", b:1},
+        {text:"Телефонды бет-әлпет арқылы ашу", b:0},
+        {text:"Кәдімгі кеңсе принтері", b:1}
+      ]
+    },
+    {type:"match", icon:"🔗", title:"«Сәйкестендір»", instruction:"Термин мен анықтаманы сәйкестендір.",
+      pairs:[["Жасанды интеллект","Адам интеллектін имитациялау"],["Алгоритм","Әрекеттер тізбегі"],["Модель","Үйренген заңдылықтар құрылымы"],["Деректер","Модель үйренетін ақпарат"],["Машиналық оқыту","Деректерден үйрену әдісі"]]},
+    {type:"tf", icon:"⚖️", title:"«Дұрыс / Бұрыс»", instruction:"Тұжырымдардың дұрыстығын анықта.",
+      items:[
+        {text:"Жасанды интеллект тек алдын ала жазылған нұсқаулармен ғана жұмыс істейді.", a:false, e:"ЖИ деректерден өз бетінше үйрене алады."},
+        {text:"«Жасанды интеллект» термині 1956 жылы Дартмут конференциясында қолданылған.", a:true, e:"Дәл сол конференцияда термин ресми айналымға енді."},
+        {text:"Деректердің сапасы модельдің дәлдігіне әсер етпейді.", a:false, e:"Сапасыз деректер — қате модельдің басты себебі."},
+        {text:"ЖИ денсаулық сақтау және қаржы салаларында қолданылады.", a:true, e:"Бұл — ЖИ ең көп қолданылатын салалар."},
+        {text:"ЖИ-дің ешқандай шектеуі жоқ.", a:false, e:"Этика, жеке өмір, ресурс шығыны — маңызды шектеулер."}
+      ]
+    },
+    {type:"single", icon:"🧩", title:"Жағдаяттық тапсырма", instruction:"Дұрыс жауапты таңда.",
+      scenario:"Оқушы ауа райын болжайтын бағдарлама жасағысы келеді. Ол өткен 5 жылдағы күнделікті температура, ылғалдылық және жел жылдамдығы деректерін жинады. Бұл қадам ЖИ жобасының қай кезеңіне жатады?",
+      options:["Модельді тестілеу","Деректерді жинау","Модельді жарнамалау","Архитектураны таңдау"],
+      answer:1, explain:"Кез келген ЖИ жобасы деректерді жинаудан басталады."}
+  ],
+  test:[
+    {type:"single", q:"Жасанды интеллект дегеніміз не?", options:["Тек ойын ойнайтын бағдарлама","Машинаның адам интеллектіне тән іс-әрекеттерді орындау қабілеті","Компьютердің жылдамдығы","Интернет желісінің түрі"], answer:1, e:"ЖИ — адамның интеллектуалдық іс-әрекеттерін машина арқылы жүзеге асыру."},
+    {type:"single", q:"«Жасанды интеллект» термині қай жылы ресми қолданылды?", options:["1950","1956","1990","2010"], answer:1, e:"1956 жылғы Дартмут конференциясында."},
+    {type:"multi", q:"ЖИ-дің негізгі міндеттерін таңдаңыз (бірнеше жауап):", options:["Қабылдау","Түсіну","Шешім қабылдау","Принтерге қағаз салу"], answer:[0,1,2], e:"Қабылдау, түсіну, оқу, шешім қабылдау — ЖИ міндеттері."},
+    {type:"single", q:"Модель дегеніміз не?", options:["Деректерді сақтайтын құрылғы","Деректерден үйренген заңдылықтарды бейнелейтін математикалық құрылым","Бағдарламалау тілі","Компьютер жады"], answer:1, e:"Модель — үйрену нәтижесінде қалыптасқан математикалық құрылым."},
+    {type:"tf", q:"Деректер сапасы модельдің дәлдігіне тікелей әсер етеді.", answer:true, e:"Сапалы деректер — дәл модельдің кепілі."},
+    {type:"tf", q:"Жасанды интеллект ешқандай этикалық мәселе тудырмайды.", answer:false, e:"Жеке өмір, кемсітушілік — маңызды этикалық мәселелер."},
+    {type:"match", q:"Терминдерді анықтамаларымен сәйкестендіріңіз:", pairs:[["Алгоритм","Әрекеттердің нақты тізбегі"],["Деректер","Модель үйренетін ақпарат"],["Модельді оқыту","Қатені түзету арқылы үйрету"],["ЖИ","Адам интеллектін имитациялау"]], e:"Әр терминнің өз анықтамасы бар."},
+    {type:"single", q:"Жағдаят: дүкенде сатып алушының мінез-құлқына қарай тауар ұсынылады. Бұл қандай ЖИ міндеті?", options:["Қабылдау","Болжау және ұсыныс беру","Роботты басқару","Дыбысты синтездеу"], answer:1, e:"Ұсыныс жүйелері болжау міндетін шешеді."}
+  ]
+},
+{
+  id:2, title:"Машиналық оқыту", short:"Машиналық оқыту", icon:"📊",
+  goal:"Машиналық оқытудың мәнін, түрлерін, негізгі ұғымдарын және практикалық қолданылуын меңгеру.",
+  aivideo:{src:"videos/topic2-ml.mp4", poster:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80", desc:"AI-аватар машиналық оқытудың 3 түрін, деректерді бөлу тәсілдерін және жіктеу мен регрессияның айырмашылығын нақты мысалдармен түсіндіреді."},
+  qr:[
+    {t:"Wikipedia: ML", u:"https://kk.wikipedia.org/wiki/Машиналық_оқыту"},
+    {t:"Kaggle Datasets", u:"https://www.kaggle.com/datasets"},
+    {t:"Coursera ML курсы", u:"https://www.coursera.org/learn/machine-learning"}
+  ],
+  theory:[
+    {t:"h", c:"Машиналық оқыту деген не?"},
+    {t:"p", c:"Машиналық оқыту (ML) — ЖИ-дің маңызды бөлігі. Ол компьютерге нақты нұсқау жазып бермей-ақ, деректердің ішінен заңдылықты табуды үйретеді."},
+    {t:"remember", c:"Классикалық бағдарламалауда: адам ережені жазады → компьютер жауап береді. ML-де: адам деректер береді → ережені компьютер өзі шығарады."},
+    {t:"svg", title:"Машиналық оқытудың 3 түрі", svg:SVG_ML_TYPES},
+    {t:"h", c:"Маңызды ұғымдар"},
+    {t:"concept", items:[
+      {k:"Деректер жинағы", v:"Модель жаттығатын мысалдар тізімі."},
+      {k:"Белгі (feature)", v:"Деректердегі нысанды сипаттайтын өлшем."},
+      {k:"Мақсатты айнымалы", v:"Модель болжайтын шама."},
+      {k:"Модель", v:"Белгі мен мақсат арасындағы тәуелділік."},
+      {k:"Оқыту бөлігі", v:"70–80% дерек — жаттығу үшін."},
+      {k:"Тексеру бөлігі", v:"20–30% дерек — сынау үшін."}
+    ]},
+    {t:"svg", title:"Деректердің оқыту/тест болып бөлінуі", svg:SVG_TRAIN_TEST},
+    {t:"h", c:"Жаттығу және сынау"},
+    {t:"p", c:"Модель оқыту бөлігінде жаттығады, тексеру бөлігінде сыналады. Егер модель жаттығу деректерін жаттап алып, жаңа деректерде шатасса — бұл overfitting (қайта оқыту) деп аталады."},
+    {t:"h", c:"Жіктеу және регрессия"},
+    {t:"p", c:"Жіктеу — нысанды белгілі бір санатқа жатқызу (спам/спам емес). Ал регрессия — үздіксіз санды болжау (үй бағасы, температура)."},
+    {t:"example", c:"Қант деңгейі бойынша диабетті анықтау — жіктеу. Қант деңгейінің нақты мәнін болжау — регрессия."},
+    {t:"h", c:"ML қайда қолданылады?"},
+    {t:"list", c:["Спамды сүзу.","Медицинада диагностика.","Банкте алаяқтықты анықтау.","Тауар мен фильм ұсыну.","Ауыл шаруашылығында болжау.","Тіл аудару."]},
+    {t:"conclusion", c:"ML — деректерден ережені өз бетімен шығаратын әдістер тобы. Жіктеу мен регрессия — ең жиі кездесетін есеп түрлері."}
+  ],
+  tasks:[
+    {type:"match", icon:"🔗", title:"ML түрлерін сәйкестендір", instruction:"Әр оқыту түрін сипаттамасымен сәйкестендір.",
+      pairs:[["Бақыланатын оқыту","Деректерде дұрыс жауап көрсетілген"],["Бақыланбайтын оқыту","Деректерде жауап жоқ"],["Күшейту арқылы оқыту","Марапат пен айыппұл"],["Жіктеу","Нысанды санатқа жатқызу"],["Регрессия","Сандық мәнді болжау"]]},
+    {type:"sort", icon:"🎯", title:"«Жіктеу ме, регрессия ма?»", instruction:"Әр жағдайды дұрыс есеп түріне жатқыз.",
+      buckets:["Жіктеу","Регрессия"],
+      items:[
+        {text:"Хаттың спам екенін анықтау", b:0},
+        {text:"Үйдің бағасын болжау", b:1},
+        {text:"Науқастың диабет екенін анықтау", b:0},
+        {text:"Ертеңгі ауа температурасын болжау", b:1},
+        {text:"Суретте мысық немесе ит екенін анықтау", b:0},
+        {text:"Келесі айдағы сату көлемін болжау", b:1}
+      ]
+    },
+    {type:"order", icon:"🔢", title:"ML жобасының кезеңдері", instruction:"Кезеңдерді дұрыс ретпен қой.",
+      items:["Мәселені айқындау","Деректерді жинау","Деректерді тазалау","Белгілерді таңдау","Модельді оқыту","Модельді сынау","Нәтижені бағалау"]},
+    {type:"single", icon:"🧩", title:"Қате модель нәтижесін талдау", instruction:"Дұрыс қорытынды жаса.",
+      scenario:"Оқушы үйдің бағасын болжайтын модель жасады. Оқыту деректерінде 99% дәлдік, жаңа деректерде 42%. Себебі неде?",
+      options:["Компьютер нашар","Модель оқыту деректерін жаттап алды (overfitting)","Деректер тым көп","Модель тым жылдам"],
+      answer:1, explain:"Overfitting — модель жалпылай алмайды. Шешім: деректерді көбейту, модельді қарапайымдату."},
+    {type:"single", icon:"🎮", title:"ML әдісін таңда", instruction:"Қолайлы әдісті таңда.",
+      scenario:"Дүкенде 5000 клиенттің сатып алу тарихы бар, бірақ топтары белгісіз. Клиенттерді ұқсас топтарға бөлу керек.",
+      options:["Регрессия","Кластерлеу","Жіктеу","Күшейту"],
+      answer:1, explain:"Дайын жауап жоқ — бақыланбайтын оқыту, яғни кластерлеу."}
+  ],
+  test:[
+    {type:"single", q:"Машиналық оқытудың басты идеясы?", options:["Адам барлық ережені жазады","Компьютер деректерден ережені өзі табады","Компьютер тек санайды","Бағдарлама жылдам"], answer:1, e:"ML — деректерден заңдылықты автоматты табу."},
+    {type:"single", q:"Белгі (feature) дегеніміз не?", options:["Модель болжайтын нәтиже","Деректердің сипаттаушы өлшемі","Қате мөлшері","Деректер көлемі"], answer:1, e:"Белгі — нысанды сипаттайтын өлшем."},
+    {type:"multi", q:"Машиналық оқытудың түрлері:", options:["Бақыланатын","Бақыланбайтын","Күшейту арқылы","Кездейсоқ"], answer:[0,1,2], e:"Үш негізгі түрі бар."},
+    {type:"single", q:"Үйдің бағасын болжау қандай есеп?", options:["Жіктеу","Регрессия","Кластерлеу","Сұрыптау"], answer:1, e:"Сандық үздіксіз мән — регрессия."},
+    {type:"tf", q:"Тест жиыны модельді оқыту үшін қолданылады.", answer:false, e:"Тест жиыны тек дәлдікті тексеру үшін."},
+    {type:"single", q:"Overfitting дегеніміз не?", options:["Модельдің тым баяу оқуы","Модельдің оқыту деректерін жаттап, жаңа деректерде қателесуі","Деректердің жоғалуы","Компьютер қызуы"], answer:1, e:"Модель жалпылай алмайды, тек жаттайды."},
+    {type:"match", q:"Сәйкестендіріңіз:", pairs:[["Жіктеу","Санатқа жатқызу"],["Регрессия","Санды болжау"],["Кластерлеу","Ұқсас топтарға бөлу"],["Деректер жиыны","Мысалдар жиынтығы"]], e:"Әр есептің өз мәні бар."},
+    {type:"single", q:"Жағдаят: банк операцияның алаяқтық екенін анықтайды. Қандай есеп?", options:["Регрессия","Жіктеу","Кластерлеу","Оптимизация"], answer:1, e:"«Алаяқтық / алаяқтық емес» — екі классты жіктеу."}
+  ]
+},
+{
+  id:3, title:"Нейрондық желіні ұйымдастыру", short:"Нейрондық желінің құрылымы", icon:"🧠",
+  goal:"Биологиялық және жасанды нейронның құрылысын, нейрондық желі қабаттарының қызметін түсіну.",
+  aivideo:{src:"videos/topic3-neuron.mp4", poster:"https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80", desc:"AI-презентер жасанды нейронның құрылысын, қабаттардың қызметін және кері таралу әдісін қарапайым схемалар арқылы түсіндіреді."},
+  qr:[
+    {t:"Wikipedia: Нейрондық желі", u:"https://kk.wikipedia.org/wiki/Нейрондық_желі"},
+    {t:"TensorFlow", u:"https://www.tensorflow.org/"},
+    {t:"Hugging Face", u:"https://huggingface.co/"}
+  ],
+  theory:[
+    {t:"h", c:"Биологиялық және жасанды нейрон"},
+    {t:"p", c:"Адам миы шамамен 86 миллиард нейроннан тұрады. Нейрон дендриттері арқылы сигнал қабылдап, аксоны арқылы келесі нейронға жеткізеді. Жасанды нейрон — осы процестің математикалық бейнесі."},
+    {t:"svg", title:"Жасанды нейрон құрылысы", svg:SVG_NEURON},
+    {t:"concept", items:[
+      {k:"Кірістер (x)", v:"Нейронға жететін сигналдар."},
+      {k:"Салмақ (w)", v:"Әр кірістің маңыздылығы."},
+      {k:"Ығысу (bias)", v:"Қозу шегін реттейтін параметр."},
+      {k:"Қосынды", v:"Σ(w·x) + b."},
+      {k:"Белсендіру функциясы", v:"Сызықты емес түрлендіру (ReLU, sigmoid)."},
+      {k:"Шығыс", v:"Келесі қабатқа жіберілетін сигнал."}
+    ]},
+    {t:"remember", c:"Нейрон формуласы: шығыс = f(Σ(wᵢ·xᵢ) + b). Егер белсендіру функциясы болмаса, желі тек сызықты түрлендіру ғана жасай алар еді."},
+    {t:"h", c:"Нейрондық желінің қабаттары"},
+    {t:"svg", title:"3 қабатты нейрондық желі", svg:SVG_NN_LAYERS},
+    {t:"p", c:"Кіріс қабаты деректерді қабылдайды, жасырын қабаттар күрделі заңдылықтарды табады, ал шығыс қабаты соңғы болжамды шығарады."},
+    {t:"h", c:"Салмақ және кері таралу"},
+    {t:"p", c:"Әр байланыстың өз салмағы бар. Оқыту барысында желі қатесін азайту үшін салмақтар «кері таралу» (backpropagation) тәсілімен түзетіліп отырады."},
+    {t:"example", c:"Қолжазба цифрды танитын желіде кіріс қабаты 784 пиксельді қабылдайды, жасырын қабаттар жиектерді табады, шығыс қабаты 10 нейрон арқылы 0–9 цифрын анықтайды."},
+    {t:"conclusion", c:"Нейрондық желі — салмақталған қосынды мен белсендіру функциясынан құралған, қабат-қабат орналасқан жасанды нейрондар жүйесі."}
+  ],
+  tasks:[
+    {type:"order", icon:"🏗️", title:"Желі қабаттарын орналастыр", instruction:"Ақпараттың өту ретіне қарай қабаттарды дұрыс ретпен қой.",
+      items:["Кіріс қабаты","Жасырын қабат","Шығыс қабаты"]},
+    {type:"match", icon:"🔗", title:"Қабаттар мен қызметтері", instruction:"Сәйкестендір.",
+      pairs:[["Кіріс қабаты","Деректерді қабылдайды"],["Жасырын қабат","Күрделі заңдылықтарды табады"],["Шығыс қабаты","Соңғы нәтижені береді"],["Салмақ","Байланыстың маңыздылығы"],["Белсендіру","Сызықты емес түрлендіру"]]},
+    {type:"order", icon:"⚙️", title:"Нейрон құрылысын жинақтау", instruction:"Ақпараттың өңделу ретін орналастыр.",
+      items:["Кірістерді қабылдау","Салмаққа көбейту","Қосындыны есептеу","Ығысуды қосу","Белсендіру функциясын қолдану","Шығыс сигналын жіберу"]},
+    {type:"single", icon:"🧩", title:"«Желі қалай жұмыс істейді?»", instruction:"Дұрыс жауапты таңда.",
+      scenario:"Желі болжам жасады, бірақ ол дұрыс жауапқа сәйкес келмеді. Желі қатесін қалай түзетеді?",
+      options:["Желі қайта іске қосылады","Қате кері таралып, салмақтар түзетіледі","Деректер өшіріледі","Ештеңе болмайды"],
+      answer:1, explain:"Кері таралу арқылы қате әр салмаққа жеткізіліп, олар қатені азайтатын бағытта өзгертіледі."}
+  ],
+  test:[
+    {type:"single", q:"Жасанды нейронның шығысы қандай формуламен есептеледі?", options:["f(Σ(wᵢ·xᵢ)+b)","Σxᵢ","w·b","x²+y²"], answer:0, e:"Салмақталған қосынды + ығысу, содан кейін белсендіру."},
+    {type:"single", q:"Салмақ (weight) нені білдіреді?", options:["Нейрон санын","Байланыстың маңыздылығын","Деректер көлемін","Қабат санын"], answer:1, e:"Салмақ — кірістің ықпал дәрежесі."},
+    {type:"multi", q:"Нейрондық желінің қабаттары:", options:["Кіріс","Жасырын","Шығыс","Деректер"], answer:[0,1,2], e:"Желі үш түрлі қабаттан тұрады."},
+    {type:"tf", q:"Белсендіру функциясы болмаса, желі тек сызықты түрлендіру жасай алады.", answer:true, e:"Сызықты емес функциялар күрделі заңдылықтарды табуға мүмкіндік береді."},
+    {type:"single", q:"Жасырын қабаттың негізгі қызметі:", options:["Деректерді сақтау","Күрделі заңдылықтарды табу","Нәтижені көрсету","Интернетке қосылу"], answer:1, e:"Жасырын қабаттар белгілерді біртіндеп жоғары деңгейде өңдейді."},
+    {type:"match", q:"Сәйкестендіріңіз:", pairs:[["Кіріс қабаты","Деректерді қабылдайды"],["Шығыс қабаты","Болжамды береді"],["Ығысу","Қозу шегін реттейді"],["Кері таралу","Салмақтарды түзетеді"]], e:"Әр элементтің өз рөлі бар."},
+    {type:"tf", q:"Нейрондық желіде ақпарат шығыстан кіріске қарай таралады.", answer:false, e:"Тура таралу кезінде ақпарат кірістен шығысқа қарай жүреді."}
+  ]
+},
+{
+  id:4, title:"Нейрондық желіні жобалау", short:"Нейрондық желіні жобалау", icon:"🛠️",
+  goal:"Нейрондық желіні жобалаудың толық технологиялық тізбегін меңгеру.",
+  aivideo:{src:"videos/topic4-design.mp4", poster:"https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&q=80", desc:"AI-аватар нейрондық желіні жобалаудың 7 кезеңін ретімен түсіндіріп, деректерді дайындау мен модельді бағалаудың маңыздылығын көрсетеді."},
+  qr:[
+    {t:"TensorFlow Tutorials", u:"https://www.tensorflow.org/tutorials"},
+    {t:"Kaggle Learn", u:"https://www.kaggle.com/learn"},
+    {t:"Google Colab", u:"https://colab.research.google.com/"}
+  ],
+  theory:[
+    {t:"h", c:"Жобалау — жүйелі процесс"},
+    {t:"p", c:"Нейрондық желіні жобалау — нақты кезеңдерден тұратын инженерлік процесс. Әр кезеңнің өз мақсаты мен нәтижесі болады."},
+    {t:"svg", title:"Нейрондық желіні жобалаудың 7 кезеңі", svg:SVG_NN_DESIGN},
+    {t:"h", c:"1–3 кезеңдер: мәселе және деректер"},
+    {t:"list", c:["1. Мәселені айқындау — жіктеу ме, әлде регрессия ма?","2. Деректерді жинау — ашық жинақтар, сауалнамалар, сенсорлар.","3. Деректерді өңдеу — тазалау, нормалдау, бөлу."]},
+    {t:"remember", c:"Деректерді дайындау — жоба уақытының шамамен 70–80%-ын алады. Бұл — ең көп еңбекті қажет ететін кезең."},
+    {t:"h", c:"4–5 кезеңдер: архитектура және оқыту"},
+    {t:"p", c:"Архитектура мәселенің түріне қарай таңдалады: суреттер үшін CNN, тізбекті деректер үшін RNN. Ал оқыту — салмақтарды реттеу процесі."},
+    {t:"h", c:"6–7 кезеңдер: бағалау және жетілдіру"},
+    {t:"list", c:["Бағалау өлшемдері: дәлдік, нақтылық, толықтық, F1, MSE.","Жетілдіру: деректерді көбейту, белгілер қосу, гиперпараметрлерді реттеу."]},
+    {t:"example", c:"Қолжазба цифрды тану желісі алғашында 88% дәлдік көрсетті. Деректерді 3 есе көбейткенде дәлдік 97%-ға жетті."},
+    {t:"conclusion", c:"Мәселе → деректер → өңдеу → архитектура → оқыту → сынау → бағалау → жетілдіру. Бұл — үнемі қайталанып отыратын цикл."}
+  ],
+  tasks:[
+    {type:"builder", icon:"🧪", title:"«Нейрондық желіні жобала» конструкторы", instruction:"Өз жобаңды құрастыр.",
+      resultTitle:"Менің нейрондық желі жобам",
+      fields:[
+        {id:"problem", label:"1. Шешілетін мәселе", type:"select", options:["Суреттегі нысанды тану","Мәтінді жіктеу","Сандық мәнді болжау","Дауысты тану","Ұсыныс жасау"]},
+        {id:"data", label:"2. Деректер көзі", type:"select", options:["Ашық датасет","Сауалнама нәтижелері","Сенсор деректері","Интернеттен жиналған","Өз деректерім"]},
+        {id:"inputs", label:"3. Кіріс параметрлері", type:"text", ph:"мысалы: ауданы, бөлме саны, қабат"},
+        {id:"layers", label:"4. Қабаттар құрылымы", type:"select", options:["Кіріс → 1 жасырын → Шығыс","Кіріс → 2 жасырын → Шығыс","Кіріс → 3 жасырын → Шығыс","Конволюциялық желі (CNN)"]},
+        {id:"output", label:"5. Шығыс нәтижесі", type:"text", ph:"мысалы: 0–9 аралығындағы цифр"}
+      ]
+    },
+    {type:"order", icon:"🔢", title:"Модельдің жұмыс кезеңдері", instruction:"Кезеңдерді дұрыс ретпен қой.",
+      items:["Мәселені айқындау","Деректерді жинау","Деректерді өңдеу","Архитектураны таңдау","Модельді оқыту","Модельді сынау","Нәтижені бағалау","Модельді жетілдіру"]},
+    {type:"single", icon:"🧩", title:"Жағдаяттық тапсырма", instruction:"Дұрыс шешімді таңда.",
+      scenario:"Модель тест жиынында 60% дәлдік көрсетті. Оқыту жиынында да 61%. Бұл қандай мәселе?",
+      options:["Қайта оқыту (overfitting)","Жеткіліксіз оқыту (underfitting)","Деректер жоқ","Компьютер нашар"],
+      answer:1, explain:"Екі жиында да төмен нәтиже — модель тым қарапайым. Шешім: модельді күрделендіру."}
+  ],
+  test:[
+    {type:"single", q:"Нейрондық желіні жобалау неден басталады?", options:["Архитектура таңдаудан","Мәселені айқындаудан","Модельді оқытудан","Жарнама жасаудан"], answer:1, e:"Мәселе дұрыс қойылмаса, қалғаны мағынасыз."},
+    {type:"single", q:"Деректерді дайындау жоба уақытының қанша бөлігін алады?", options:["5–10%","20%","70–80%","100%"], answer:2, e:"Деректерді тазалау — ең көп уақыт алатын кезең."},
+    {type:"multi", q:"Деректерді дайындауға не жатады?", options:["Жетіспейтін мәндерді толтыру","Нормалдау","Оқыту және тест жиындарына бөлу","Жарнама мәтінін жазу"], answer:[0,1,2], e:"Жарнама — жобалау кезеңіне жатпайды."},
+    {type:"single", q:"Суреттерді өңдеуге қандай желі қолайлы?", options:["RNN","CNN (конволюциялық)","Сызықтық регрессия","Шешім ағашы"], answer:1, e:"Конволюциялық желілер суреттермен жұмысқа арналған."},
+    {type:"tf", q:"Модельді бағалау үшін дәлдік, нақтылық, толықтық өлшемдері қолданылады.", answer:true, e:"Бұл — стандартты бағалау өлшемдері."},
+    {type:"single", q:"Underfitting дегеніміз не?", options:["Модель тым күрделі","Модель тым қарапайым, нәтижесі төмен","Деректер тым көп","Модель жылдам"], answer:1, e:"Модель заңдылықты жеткілікті ұстай алмайды."},
+    {type:"match", q:"Кезеңдер мен әрекеттерді сәйкестендіріңіз:", pairs:[["Мәселені айқындау","Мақсатты тұжырымдау"],["Деректерді өңдеу","Тазалау және нормалдау"],["Оқыту","Салмақтарды реттеу"],["Жетілдіру","Гиперпараметрлерді өзгерту"]], e:"Әр кезеңнің өз міндеті бар."}
+  ]
+},
+{
+  id:5, title:"IT Startup қалай іске қосылады?", short:"IT startup негіздері", icon:"🚀",
+  goal:"Startup ұғымын, ерекшеліктерін, идеядан MVP-ге дейінгі жолды меңгеру.",
+  aivideo:{src:"videos/topic5-startup.mp4", poster:"https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80", desc:"AI-презентер стартаптың идеядан бастап алғашқы клиентке дейінгі жолын, MVP ұғымын және бизнес-модельдің маңызын түсіндіреді."},
+  qr:[
+    {t:"Y Combinator", u:"https://www.ycombinator.com/"},
+    {t:"Product Hunt", u:"https://www.producthunt.com/"},
+    {t:"Wikipedia: Startup", u:"https://en.wikipedia.org/wiki/Startup_company"}
+  ],
+  theory:[
+    {t:"h", c:"Startup деген не?"},
+    {t:"p", c:"Startup — белгісіздік жағдайында жылдам өсуге ұмтылған жаңа бизнес. Ол не жаңа нарық іздейді, не қалыптасқан нарыққа тың шешім ұсынады."},
+    {t:"h", c:"IT startup-тың ерекшеліктері"},
+    {t:"svg", title:"IT startup-тың негізгі ерекшеліктері", svg:SVG_STARTUP_FEATURES},
+    {t:"svg", title:"Startup іске қосу жолы", svg:SVG_STARTUP},
+    {t:"h", c:"Мәселені айқындау"},
+    {t:"p", c:"Жақсы стартап «мен не істеймін?» деген сұрақтан емес, «қандай мәселені шешемін?» деген сұрақтан басталады."},
+    {t:"remember", c:"Ұлы идея жоқ — ұлы мәселе бар. Стартап мәселені шешеді, идеяны сатпайды."},
+    {t:"h", c:"Мақсатты аудитория"},
+    {t:"p", c:"Мақсатты аудитория — өніміңді ең алдымен қажет ететін адамдар тобы. Оларды жас, қызығушылық, тұрғылықты жері бойынша сипаттауға болады."},
+    {t:"h", c:"MVP"},
+    {t:"p", c:"MVP (Minimum Viable Product) — өнімнің ең қарапайым, бірақ жұмыс істейтін нұсқасы. Мақсаты — идеяны тез сынап көру."},
+    {t:"example", c:"Тамақ жеткізу стартапын бастау үшін әуелі 10 мейрамханамен жұмыс істейтін қарапайым сайт жасау жеткілікті."},
+    {t:"h", c:"Команда және бизнес-модель"},
+    {t:"p", c:"Стартап командасы: идея авторы, бағдарламашы, дизайнер, маркетолог. Ал бизнес-модель — стартаптың қалай ақша табатынын сипаттайтын схема."},
+    {t:"conclusion", c:"Startup — мәселені шешуге негізделген, жылдам өсуге ұмтылған жаңа бизнес. Идея → аудитория → MVP → кері байланыс → өсу."}
+  ],
+  tasks:[
+    {type:"builder", icon:"💡", title:"«Startup идеяңды жаса» конструкторы", instruction:"Өз IT startup идеяңды құрастыр.",
+      resultTitle:"Менің Startup идеям",
+      fields:[
+        {id:"problem", label:"1. Қандай мәселені шешесің?", type:"select", options:["Оқуға көмектесу","Көлік қозғалысы","Экология","Денсаулық","Қаржылық сауаттылық","Бос уақытты ұйымдастыру"]},
+        {id:"audience", label:"2. Мақсатты аудитория", type:"text", ph:"мысалы: 15–18 жастағы оқушылар"},
+        {id:"solution", label:"3. Ұсынылатын шешім", type:"textarea", ph:"Өнімің қалай жұмыс істейді?"},
+        {id:"name", label:"4. Өнім атауы", type:"text", ph:"мысалы: StudyMate"},
+        {id:"mvp", label:"5. MVP", type:"textarea", ph:"Алғашқы нұсқада қандай мүмкіндіктер болады?"},
+        {id:"team", label:"6. Команда мүшелері", type:"textarea", ph:"мысалы: 1 бағдарламашы, 1 дизайнер, 1 маркетолог"}
+      ]
+    },
+    {type:"match", icon:"🔗", title:"Startup терминдерін сәйкестендір", instruction:"Термин мен анықтаманы сәйкестендір.",
+      pairs:[["Startup","Жылдам өсуге бағытталған жаңа бизнес"],["MVP","Өнімнің ең қарапайым нұсқасы"],["Мақсатты аудитория","Өнімді қажет ететін адамдар тобы"],["Бизнес-модель","Қалай ақша табатыны"],["Бәсекелес","Сол нарықтағы басқа компания"]]},
+    {type:"single", icon:"🧩", title:"Жағдаяттық тапсырма", instruction:"Ең дұрыс шешімді таңда.",
+      scenario:"Оқушылар тобы мектептегі кестені автоматты құратын қосымша жасағысы келеді. Неден бастау керек?",
+      options:["Бірден толық мобильді қосымша жасау","Мұғалімдермен және оқушылармен сөйлесіп, нақты мәселені айқындау","Инвестиция іздеу","Жарнама жасау"],
+      answer:1, explain:"Алдымен мәселені зерттеу керек. Нақты мәселе айқындалмайынша, өнім жасау тиімсіз."},
+    {type:"order", icon:"🔢", title:"Startup іске қосу кезеңдері", instruction:"Кезеңдерді дұрыс ретпен орналастыр.",
+      items:["Мәселені айқындау","Аудиторияны зерттеу","MVP жасау","Алғашқы қолданушыларды тарту","Кері байланыс жинау","Бизнес-модельді қалыптастыру"]}
+  ],
+  test:[
+    {type:"single", q:"Startup дегеніміз не?", options:["Кез келген шағын бизнес","Жылдам өсуге бағытталған жаңа бизнес","Мемлекеттік мекеме","Қайырымдылық қоры"], answer:1, e:"Startup — жаңа нарық немесе жаңа шешім іздейтін бизнес."},
+    {type:"single", q:"MVP дегеніміз не?", options:["Ең қымбат өнім","Өнімнің ең қарапайым жұмыс істейтін нұсқасы","Маркетинг құралы","Компания атауы"], answer:1, e:"MVP — идеяны тез тексеруге арналған минималды өнім."},
+    {type:"multi", q:"Startup командасында кімдер болуы мүмкін?", options:["Бағдарламашы","Дизайнер","Маркетолог","Кездейсоқ адам"], answer:[0,1,2], e:"Команда нақты дағдыларға ие мамандардан құралады."},
+    {type:"tf", q:"Startup идеясы «мен не істеймін?» деген сұрақтан басталады.", answer:false, e:"Startup «қандай мәселені шешемін?» деген сұрақтан басталады."},
+    {type:"single", q:"Мақсатты аудитория дегеніміз не?", options:["Барлық адамдар","Өнімді қажет ететін нақты адамдар тобы","Компания қызметкерлері","Инвесторлар"], answer:1, e:"Аудитория нақты сипатталуы керек."},
+    {type:"single", q:"Бизнес-модель нені сипаттайды?", options:["Өнім түсін","Стартаптың қалай ақша табатынын","Команда мүшелерін","Сервер қуатын"], answer:1, e:"Бизнес-модель — табыс көзін сипаттайтын схема."},
+    {type:"tf", q:"MVP-ге мүмкіндігінше көп функция қосу керек.", answer:false, e:"MVP минималды болуы керек — тек негізгі мәселені шешетін мүмкіндіктер."}
+  ]
+},
+{
+  id:6, title:"Жобаны алға жылжыту", short:"Жобаны алға жылжыту", icon:"📈",
+  goal:"Маркетинг, брендинг, SMM, контент-маркетинг және клиент тарту әдістерін меңгеру.",
+  aivideo:{src:"videos/topic6-marketing.mp4", poster:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80", desc:"AI-презентер маркетингтің 4P моделін, брендинг негіздерін, SMM мен контент-маркетингтің түрлерін нақты мысалдармен түсіндіреді."},
+  qr:[
+    {t:"HubSpot Marketing", u:"https://blog.hubspot.com/marketing"},
+    {t:"Mailchimp", u:"https://mailchimp.com/"},
+    {t:"Canva (дизайн)", u:"https://www.canva.com/"}
+  ],
+  theory:[
+    {t:"h", c:"Жобаны жылжыту деген не?"},
+    {t:"p", c:"Жобаны жылжыту — өнімің туралы ақпаратты мақсатты аудиторияға жеткізіп, оларды қолданушыға айналдыру барысы."},
+    {t:"remember", c:"Өнім жасау — жұмыстың жартысы. Қалған жартысы — оны адамдарға жеткізу."},
+    {t:"h", c:"Маркетингтің 4P моделі"},
+    {t:"svg", title:"Маркетингтің 4P моделі", svg:SVG_4P},
+    {t:"h", c:"Мақсатты аудитория"},
+    {t:"list", c:["Жас тобы мен жынысы.","Қызығушылықтары мен мінез-құлқы.","Тұрғылықты жері мен тілі.","Қандай әлеуметтік желіні қолданады.","Қанша төлеуге дайын."]},
+    {t:"h", c:"Брендинг"},
+    {t:"p", c:"Бренд — өнім туралы адамдардың санасында қалыптасқан бейне. Брендинг дегеніміз — атау, логотип, түс, тон арқылы осы бейнені құру."},
+    {t:"h", c:"SMM және контент-маркетинг"},
+    {t:"concept", items:[
+      {k:"Білім беру контенті", v:"Кеңестер, нұсқаулықтар, фактілер."},
+      {k:"Ойын-сауық контенті", v:"Мемдер, қысқа видеолар, челлендждер."},
+      {k:"Шабыттандыру контенті", v:"Табыс тарихтары, мотивация."},
+      {k:"Өнім контенті", v:"Жаңалықтар, жаңартулар, шолулар."}
+    ]},
+    {t:"h", c:"Әлеуметтік желілер"},
+    {t:"list", c:["Instagram/TikTok — қысқа видео.","YouTube — толық шолу.","Telegram — қауымдастық.","LinkedIn — кәсіби аудитория."]},
+    {t:"example", c:"Құндылық ұсынысы: «Біздің қосымша — оқушыларға арналған, кестені 30 секундта құратын, тегін және қазақ тіліндегі жалғыз құрал»."},
+    {t:"conclusion", c:"Жобаны жылжыту — маркетинг, брендинг, SMM және контент арқылы аудиториямен байланыс орнату."}
+  ],
+  tasks:[
+    {type:"single", icon:"🎯", title:"Мақсатты аудиторияны таңда", instruction:"Ең сәйкес аудиторияны анықта.",
+      scenario:"Стартап «оқушыларға арналған тегін онлайн-кітапхана» жасады. Ең дұрыс мақсатты аудитория қайсы?",
+      options:["Барлық адамдар","14–18 жас аралығындағы оқушылар мен мұғалімдер","Зейнеткерлер","Шетелдік туристер"],
+      answer:1, explain:"Нақты жас тобы мен қызығушылыққа сәйкес аудитория таңдау — тиімді маркетингтің негізі."},
+    {type:"match", icon:"🔗", title:"Контент түрлері", instruction:"Контент түрін мысалмен сәйкестендір.",
+      pairs:[
+        ["Білім беру контенті","«Модельді қалай оқыту керек» нұсқаулығы"],
+        ["Ойын-сауық контенті","IT туралы қысқа мем"],
+        ["Шабыттандыру контенті","Оқушының стартап табыс тарихы"],
+        ["Өнім контенті","Қосымшаның жаңа нұсқасы туралы жаңалық"]
+      ]},
+    {type:"builder", icon:"🗓️", title:"Контент жоспарын құрастыр", instruction:"Бір аптаға арналған контент жоспарыңды жаз.",
+      resultTitle:"Менің контент жоспарым",
+      fields:[
+        {id:"platform", label:"1. Негізгі платформа", type:"select", options:["Instagram","TikTok","Telegram","YouTube","LinkedIn"]},
+        {id:"audience", label:"2. Мақсатты аудитория", type:"text", ph:"мысалы: 16–18 жастағы оқушылар"},
+        {id:"goal", label:"3. Жылжыту мақсаты", type:"select", options:["Қолданушы санын арттыру","Бренд танымалдылығы","Сату көлемін өсіру","Қауымдастық құру"]},
+        {id:"plan", label:"4. Апталық контент жоспары", type:"textarea", ph:"Дүйсенбі: ... Сейсенбі: ... Сәрсенбі: ..."}
+      ]
+    },
+    {type:"single", icon:"🧩", title:"Жағдаяттық тапсырма", instruction:"Дұрыс стратегияны таңда.",
+      scenario:"Стартапта маркетингке небәрі 20 000 теңге бөлінді. Қай стратегия тиімдірек?",
+      options:["Теледидарға жарнама беру","Тегін контент жасап, әлеуметтік желіде блогерлермен ынтымақтасу","Газетке мақала жариялау","Билборд жалдау"],
+      answer:1, explain:"Аз бюджетпен органикалық контент пен микро-блогерлермен ынтымақтастық ең тиімді жол."}
+  ],
+  test:[
+    {type:"single", q:"Маркетингтің 4P моделіне не кіреді?", options:["Product, Price, Place, Promotion","People, Power, Plan, Profit","Data, Model, Code, Test","Design, Develop, Deploy, Debug"], answer:0, e:"4P — өнім, баға, орын, жылжыту."},
+    {type:"single", q:"Брендинг дегеніміз не?", options:["Өнім бағасын белгілеу","Өнім туралы тұрақты бейне қалыптастыру","Серверді реттеу","Код жазу"], answer:1, e:"Бренд — аудитория санасындағы бейне."},
+    {type:"multi", q:"SMM құралдарына не жатады?", options:["Тұрақты контент","Аудиториямен қарым-қатынас","Таргеттелген жарнама","Серверді жаңарту"], answer:[0,1,2], e:"Сервер жаңарту — техникалық жұмыс."},
+    {type:"tf", q:"Ең жақсы өнім жылжытусыз да өздігінен танымал болады.", answer:false, e:"Жылжытусыз өнім туралы аудитория білмейді."},
+    {type:"single", q:"Құндылық ұсынысы нені сипаттайды?", options:["Компания логотипін","Өнімнің кім үшін және несімен жақсы екенін","Қызметкерлер санын","Сервер қуатын"], answer:1, e:"Бұл — өнімнің басты артықшылығының қысқа тұжырымы."},
+    {type:"match", q:"Платформа мен мақсатты сәйкестендіріңіз:", pairs:[["TikTok","Қысқа вирустық видеолар"],["Telegram","Қауымдастық және жаңалықтар"],["LinkedIn","Кәсіби аудитория"],["YouTube","Толық шолулар"]], e:"Әр платформаның өз аудиториясы бар."},
+    {type:"single", q:"Микро-блогермен ынтымақтастықтың артықшылығы:", options:["Қымбат","Аз бюджетпен нақты аудиторияға жету","Мүлдем тиімсіз","Тек үлкен компанияларға арналған"], answer:1, e:"Микро-блогерлердің аудиториясы шағын, бірақ сенімді."}
+  ]
+},
+{
+  id:7, title:"IT Startup жарнамасы", short:"Startup жарнамасы", icon:"📢",
+  goal:"Жарнаманың мақсатын, түрлерін, слоган мен CTA құру принциптерін меңгеру.",
+  aivideo:{src:"videos/topic7-advertising.mp4", poster:"https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80", desc:"AI-аватар жарнаманың құрылымын, AIDA моделін, күшті слоган мен тиімді CTA жасау ережелерін мысалдармен түсіндіреді."},
+  qr:[
+    {t:"AIDA модель", u:"https://en.wikipedia.org/wiki/AIDA_(marketing)"},
+    {t:"Canva (постер)", u:"https://www.canva.com/"},
+    {t:"Figma (дизайн)", u:"https://www.figma.com/"}
+  ],
+  theory:[
+    {t:"h", c:"Жарнама деген не және оның мақсаты"},
+    {t:"p", c:"Жарнама — өнім не қызмет туралы ақпарат тарату арқылы аудиторияны әрекетке шақыратын құрал. Мақсаты: танымалдылық, қолданушы тарту, сатуды ұлғайту."},
+    {t:"remember", c:"Жарнаманың мақсаты — тек ақпарат беру емес, нақты әрекетке шақыру."},
+    {t:"svg", title:"Жарнаманың құрылымы", svg:SVG_AD_STRUCT},
+    {t:"h", c:"Slogan"},
+    {t:"p", c:"Slogan — брендтің басты идеясын қысқа әрі есте қаларлық түрде жеткізетін сөз тіркесі. Жақсы слоган 3–7 сөзден тұрады және эмоция тудырады."},
+    {t:"example", c:"Мысалдар: «Ойла. Әртүрлі ойла.» (Apple), «Жай ғана істе.» (Nike). Қазақша: «Білім — болашаққа жол»."},
+    {t:"h", c:"Жарнама түрлері"},
+    {t:"concept", items:[
+      {k:"Постер", v:"Статикалық визуал: сурет, слоган, CTA."},
+      {k:"Видео жарнама", v:"Қысқа бейнеролик — эмоция арқылы әсер етеді."},
+      {k:"Social Media", v:"Әлеуметтік желідегі таргеттелген жарнама."},
+      {k:"Іздеу жарнамасы", v:"Іздеу жүйесіндегі сөздер бойынша."},
+      {k:"Ауызша жарнама", v:"Достардың ұсынысы — ең сенімді түрі."}
+    ]},
+    {t:"h", c:"CTA (Call To Action)"},
+    {t:"p", c:"CTA — «әрекетке шақыру». Жарнаманың соңында адам не істеуі керектігі нақты айтылуы тиіс. Мысалы: «Қазір тіркел», «Тегін байқап көр»."},
+    {t:"remember", c:"CTA нақты, қысқа және әрекет етістігімен басталуы керек. «Біз туралы біліңіз» емес, «Қазір тіркеліңіз»."},
+    {t:"h", c:"AIDA моделі"},
+    {t:"svg", title:"AIDA моделі — жарнама әсерінің классикалық құрылымы", svg:SVG_AIDA},
+    {t:"list", c:["Attention (назар) → Interest (қызығушылық) → Desire (қалау) → Action (әрекет).","Мәтін қысқа және түсінікті болуы керек.","Аудиторияның мәселесіне тікелей жауап беру.","Бір жарнамада бір ғана негізгі идея.","Визуал мен мәтін бір-бірін толықтыруы керек."]},
+    {t:"conclusion", c:"Жарнама — өнімді аудиторияға жеткізетін көпір. Күшті слоган, нақты CTA және AIDA моделіне құрылған мәтін жарнаманы тиімді етеді."}
+  ],
+  tasks:[
+    {type:"builder", icon:"🎬", title:"«Startup жарнамасын жаса» конструкторы", instruction:"Өз стартапыңның жарнамасын құрастыр.",
+      resultTitle:"Менің жарнама макетім",
+      fields:[
+        {id:"name", label:"1. Startup атауы", type:"text", ph:"мысалы: StudyMate"},
+        {id:"slogan", label:"2. Slogan", type:"text", ph:"мысалы: Оқы. Ойла. Жең."},
+        {id:"audience", label:"3. Мақсатты аудитория", type:"select", options:["Оқушылар","Студенттер","Мұғалімдер","Ата-аналар","Кәсіпкерлер","Жалпы қолданушылар"]},
+        {id:"text", label:"4. Жарнама мәтіні", type:"textarea", ph:"Мәселені, шешімді және пайданы жазыңыз..."},
+        {id:"cta", label:"5. CTA", type:"select", options:["Қазір тіркел!","Тегін байқап көр!","Қосымшаны жүктеп ал!","Сайтқа кір!","Бізге қосыл!"]},
+        {id:"format", label:"6. Жарнама форматы", type:"select", options:["Постер","Қысқа видео","Instagram Stories","TikTok ролик","Telegram пост"]}
+      ]
+    },
+    {type:"single", icon:"🧩", title:"AIDA моделі бойынша тапсырма", instruction:"Қай бөлігі «Action» кезеңіне жатады?",
+      scenario:"«Жаңа StudyMate қосымшасы оқу кестесін 30 секундта құрады. Енді сағаттар бойы жоспар құрудың қажеті жоқ. Бүгін тегін тіркел!»",
+      options:["«Жаңа StudyMate қосымшасы...»","«...оқу кестесін 30 секундта құрады»","«Енді сағаттар бойы жоспар құрудың қажеті жоқ»","«Бүгін тегін тіркел!»"],
+      answer:3, explain:"Соңғы сөйлем — нақты әрекетке шақыру (CTA = Action)."},
+    {type:"tf", icon:"⚖️", title:"Жарнама ережелері", instruction:"Тұжырымдардың дұрыстығын анықта.",
+      items:[
+        {text:"Жақсы слоган қысқа және есте қаларлық болуы керек.", a:true, e:"3–7 сөз — ең тиімді ұзындық."},
+        {text:"Жарнамада мүмкіндігінше көп идея болғаны жақсы.", a:false, e:"Бір жарнама — бір негізгі идея."},
+        {text:"CTA нақты әрекет етістігімен басталуы керек.", a:true, e:"«Тіркел», «Жүктеп ал» — нақты әрекеттер."},
+        {text:"Жарнама мәтіні аудиторияның тілінде болуы керек.", a:true, e:"Әйтпесе жарнама түсініксіз болады."}
+      ]
+    }
+  ],
+  test:[
+    {type:"single", q:"AIDA моделіндегі «A» нені білдіреді?", options:["Action","Attention","Audience","Advert"], answer:1, e:"Attention — назар аудару."},
+    {type:"single", q:"CTA дегеніміз не?", options:["Жарнама бағасы","Әрекетке шақыру","Жарнама түсі","Компания логотипі"], answer:1, e:"CTA — Call To Action."},
+    {type:"multi", q:"Жақсы слоганның қасиеттері:", options:["Қысқа","Есте қаларлық","Түсінікті","Тым ұзақ"], answer:[0,1,2], e:"Ұзақ слоган есте қалмайды."},
+    {type:"tf", q:"Жарнаманың мақсаты тек ақпарат беру.", answer:false, e:"Жарнама әрекетке шақыруы керек."},
+    {type:"single", q:"Қай жарнама түрі ең сенімді саналады?", options:["Теледидар","Ауызша ұсыныс","Билборд","Радио"], answer:1, e:"Ауызша ұсыныс — ең жоғары сенім деңгейіне ие."},
+    {type:"match", q:"Жарнама элементтерін сәйкестендіріңіз:", pairs:[["Slogan","Қысқа есте қаларлық тіркес"],["CTA","Әрекетке шақыру"],["Постер","Статикалық визуал"],["Аудитория","Жарнама бағытталған топ"]], e:"Әр элементтің өз рөлі бар."},
+    {type:"single", q:"Жағдаят: жарнама мәтіні «Біз туралы көбірек біліңіз» деп аяқталды. Бұл неге әлсіз?", options:["Тым қысқа","Нақты әрекетті көрсетпейді","Қазақ тілінде емес","Тым ұзақ"], answer:1, e:"CTA нақты әрекетті көрсетуі керек: «тіркел», «жүктеп ал»."}
+  ]
+},
+{
+  id:8, title:"Қорытынды IT Startup жобасы", short:"Қорытынды жоба", icon:"🏁",
+  goal:"Алдыңғы тақырыптар бойынша алған білімді біріктіріп, толық IT startup жобасын әзірлеу.",
+  aivideo:{src:"videos/topic8-final.mp4", poster:"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80", desc:"AI-презентер қорытынды жобаның 12 пунктін, оны қорғау тәсілдерін және бағалау критерийлерін ретімен түсіндіреді."},
+  qr:[
+    {t:"Y Combinator Startup School", u:"https://www.startupschool.org/"},
+    {t:"Product Hunt", u:"https://www.producthunt.com/"},
+    {t:"Indie Hackers", u:"https://www.indiehackers.com/"}
+  ],
+  theory:[
+    {t:"h", c:"Қорытынды жоба не үшін қажет?"},
+    {t:"p", c:"Теория мен жеке тапсырмалар — білімнің негізі. Ал нағыз білім практикада, біртұтас жоба жасау барысында қалыптасады."},
+    {t:"remember", c:"Жоба — жай ғана тапсырма емес. Бұл — сенің портфолиоң. Оны университетке түсуде, грант алуда көрсете аласың."},
+    {t:"svg", title:"Жоба құрылымы — 12 пункт", svg:SVG_PROJECT},
+    {t:"h", c:"Жобаның 12 пункті"},
+    {t:"list", c:["1. Startup атауы — қысқа, есте қаларлық.","2. Мәселе — қандай нақты қиындық бар?","3. Мәселенің өзектілігі — неге маңызды?","4. Ұсынылатын шешім — сен нені ұсынасың?","5. ЖИ қолдану — қай жерде көмектеседі?","6. ML элементтері — қандай модель, қандай деректер?","7. Мақсатты аудитория — кім үшін?","8. MVP — ең алғашқы нұсқада не болады?","9. Маркетинг жоспары — қалай таныстырасың?","10. Жарнама — слоган, мәтін, CTA.","11. Жобаның артықшылығы — несімен ерекшеленеді?","12. Жобаның болашағы — келесі қадамдар."]},
+    {t:"h", c:"Жобаны қорғау"},
+    {t:"p", c:"Жобаны қорғау — оны басқаларға түсінікті әрі сенімді түрде таныстыру. 3–5 минутқа жоспарланған қысқа, нақты сөз — ең тиімді формат."},
+    {t:"h", c:"Бағалау критерийлері"},
+    {t:"list", c:["Мәселенің нақтылығы мен өзектілігі.","Шешімнің мәселеге сәйкестігі.","ЖИ мен ML элементтерінің орынды қолданылуы.","Аудиторияның айқындылығы.","MVP-нің шынайылығы.","Маркетинг жоспарының толықтығы."]},
+    {t:"conclusion", c:"Қорытынды жоба — курста алған білімді біріктіретін шың. Мәселеден бастап жарнамаға дейінгі толық циклді өз қолыңмен жасау — нағыз кәсіби тәжірибе."}
+  ],
+  tasks:[
+    {type:"single", icon:"🧩", title:"Жоба қорғауға дайындық", instruction:"Ең дұрыс тәсілді таңда.",
+      scenario:"Сен жобаңды 5 минутта қорғауың керек. Ең тиімді құрылым қайсы?",
+      options:["Тек өнім атауын айтып, бейнені көрсету","Мәселе → шешім → аудитория → MVP → маркетинг → болашақ","Тек команда мүшелерін таныстыру","Тек бағасын айту"],
+      answer:1, explain:"Бұл құрылым жобаның толық логикасын қысқа уақытта жеткізеді."},
+    {type:"tf", icon:"⚖️", title:"Жоба критерийлері", instruction:"Тұжырымдардың дұрыстығын анықта.",
+      items:[
+        {text:"MVP мүмкіндігінше көп функцияны қамтуы керек.", a:false, e:"MVP — минималды, бірақ жұмыс істейтін нұсқа."},
+        {text:"ЖИ жобада тек орынды жерде қолданылуы керек.", a:true, e:"ЖИ — құрал, ол мәселені шынымен шешетін болса ғана қажет."},
+        {text:"Жобаны қорғау кезінде мақсатты аудиторияны дәлелдеу маңызды.", a:true, e:"Аудитория нақты деректермен негізделуі керек."},
+        {text:"Жобаның болашағы туралы айтудың қажеті жоқ.", a:false, e:"Болашақ жоспар — жобаның өсу әлеуетін көрсетеді."}
+      ]
+    }
+  ],
+  test:[
+    {type:"single", q:"Қорытынды жобаның бірінші бөлімі қандай болуы керек?", options:["Жарнама","Startup атауы","Қаржылық есеп","Команда"], answer:1, e:"Жоба атауы мен мәселеден басталады."},
+    {type:"single", q:"Мәселенің өзектілігі нені білдіреді?", options:["Мәселенің қаншалықты маңызды және кең таралғанын","Мәселенің бағасын","Мәселені кім ойлап тапқанын","Мәселенің жасын"], answer:0, e:"Өзектілік — мәселенің маңыздылығы мен ауқымы."},
+    {type:"multi", q:"Жобаны қорғау кезінде не көрсетілуі керек?", options:["Мәселе","Шешім","Аудитория","Кездейсоқ әңгіме"], answer:[0,1,2], e:"Қорғау нақты құрылыммен жүреді."},
+    {type:"tf", q:"ЖИ қорытынды жобада тек сән үшін қосылады.", answer:false, e:"ЖИ нақты мәселені шешуге қызмет етуі керек."},
+    {type:"single", q:"MVP дегеніміз не (8-тақырып бойынша)?", options:["Өнімнің ең қарапайым жұмыс істейтін нұсқасы","Ең қымбат нұсқа","Маркетинг жоспары","Команда тізімі"], answer:0, e:"MVP — идеяны тексеруге арналған минимум."},
+    {type:"single", q:"Жобаның болашағы бөлімінде не жазылады?", options:["Келесі қадамдар мен өсу жоспары","Өткен қателер","Компания логотипі","Қызметкерлер саны"], answer:0, e:"Болашақ — даму жоспары."},
+    {type:"tf", q:"Жобаны 3–5 минутта қорғау мүмкін емес.", answer:false, e:"Қысқа, нақты қорғау — ең тиімді формат."}
+  ]
+}
+];
+
+const GENERAL_TEST = [
+{type:"single", lvl:"green", topic:"Жасанды интеллект", q:"Жасанды интеллект дегеніміз не?", options:["Машинаның адам интеллектіне тән іс-әрекеттерді орындау қабілеті","Компьютердің жылдамдығы","Интернет жылдамдығы","Бағдарламалау тілі"], answer:0, e:"ЖИ — адам интеллектін имитациялайтын технологиялар жиынтығы."},
+{type:"single", lvl:"green", topic:"Жасанды интеллект", q:"«Жасанды интеллект» термині қай жылы пайда болды?", options:["1936","1950","1956","2001"], answer:2, e:"1956 жылғы Дартмут конференциясында."},
+{type:"tf", lvl:"yellow", topic:"Жасанды интеллект", q:"ЖИ тек алдын ала жазылған нұсқаулармен жұмыс істейді.", answer:false, e:"ЖИ деректерден өз бетінше үйрене алады."},
+{type:"multi", lvl:"yellow", topic:"Жасанды интеллект", q:"ЖИ қолданылатын салаларды таңдаңыз:", options:["Медицина","Қаржы","Көлік","Қолмен жазылған хат жіберу"], answer:[0,1,2], e:"Медицина, қаржы, көлік — ЖИ белсенді қолданылатын салалар."},
+{type:"single", lvl:"green", topic:"Машиналық оқыту", q:"Машиналық оқытудың мәні неде?", options:["Компьютер деректерден ережені өзі табады","Адам барлық ережені жазады","Компьютер тек санайды","Деректер сақталады"], answer:0, e:"ML — деректерден заңдылықты автоматты табу."},
+{type:"single", lvl:"green", topic:"Машиналық оқыту", q:"Белгі (feature) дегеніміз не?", options:["Модель болжайтын нәтиже","Деректердің сипаттаушы өлшемі","Қате мөлшері","Деректер көлемі"], answer:1, e:"Белгі — нысанды сипаттайтын өлшем."},
+{type:"single", lvl:"yellow", topic:"Машиналық оқыту", q:"Үйдің бағасын болжау қандай есеп түріне жатады?", options:["Жіктеу","Регрессия","Кластерлеу","Сұрыптау"], answer:1, e:"Сандық үздіксіз мән — регрессия."},
+{type:"single", lvl:"red", topic:"Машиналық оқыту", q:"Модель оқыту жиынында 99%, тест жиынында 45% дәлдік көрсетті. Бұл қандай мәселе?", options:["Underfitting","Overfitting","Деректер жоқ","Компьютер ақауы"], answer:1, e:"Overfitting — модель оқыту деректерін жаттап алған."},
+{type:"single", lvl:"green", topic:"Нейрондық желілер", q:"Жасанды нейронның шығысы қалай есептеледі?", options:["f(Σ(wᵢ·xᵢ)+b)","x+y","w·b","x²"], answer:0, e:"Салмақталған қосынды + ығысу, содан кейін белсендіру функциясы."},
+{type:"single", lvl:"yellow", topic:"Нейрондық желілер", q:"Салмақ (weight) нені көрсетеді?", options:["Нейрон санын","Байланыстың маңыздылығын","Қабат санын","Деректер көлемін"], answer:1, e:"Салмақ — кірістің ықпал дәрежесі."},
+{type:"multi", lvl:"green", topic:"Нейрондық желілер", q:"Нейрондық желінің қабаттары:", options:["Кіріс","Жасырын","Шығыс","Сақтау"], answer:[0,1,2], e:"Желі үш қабат түрінен тұрады."},
+{type:"single", lvl:"yellow", topic:"Нейрондық желіні жобалау", q:"Нейрондық желіні жобалау неден басталады?", options:["Мәселені айқындаудан","Оқытудан","Жарнамадан","Тестілеуден"], answer:0, e:"Мәселені дұрыс қою — бірінші қадам."},
+{type:"single", lvl:"green", topic:"Нейрондық желіні жобалау", q:"Деректерді дайындау жоба уақытының қанша бөлігін алады?", options:["5%","20%","70–80%","100%"], answer:2, e:"Деректерді тазалау ең көп уақыт алады."},
+{type:"single", lvl:"red", topic:"Нейрондық желіні жобалау", q:"Модель оқыту жиынында да, тест жиынында да 55% дәлдік көрсетті. Шешім қандай?", options:["Модельді қарапайымдату","Модельді күрделендіру және оқытуды ұзарту","Деректерді жою","Тесті тоқтату"], answer:1, e:"Бұл — underfitting. Модель тым қарапайым."},
+{type:"single", lvl:"green", topic:"IT Startup", q:"Startup дегеніміз не?", options:["Кез келген дүкен","Жылдам өсуге бағытталған жаңа бизнес","Мемлекеттік мекеме","Қор"], answer:1, e:"Startup — жаңа нарық немесе жаңа шешім іздейтін бизнес."},
+{type:"single", lvl:"green", topic:"IT Startup", q:"MVP дегеніміз не?", options:["Ең қымбат өнім","Өнімнің ең қарапайым жұмыс істейтін нұсқасы","Маркетинг құралы","Компания атауы"], answer:1, e:"MVP — идеяны тексеруге арналған минимум."},
+{type:"single", lvl:"yellow", topic:"IT Startup", q:"Startup идеясы қандай сұрақтан басталады?", options:["«Мен не істеймін?»","«Қандай мәселені шешемін?»","«Қанша ақша табамын?»","«Кімге ұнайды?»"], answer:1, e:"Нағыз стартап мәселеден басталады."},
+{type:"single", lvl:"yellow", topic:"IT Startup", q:"Мақсатты аудитория дегеніміз не?", options:["Барлық адамдар","Өнімді қажет ететін нақты адамдар тобы","Инвесторлар","Команда мүшелері"], answer:1, e:"Аудитория нақты сипатталуы керек."},
+{type:"single", lvl:"red", topic:"IT Startup", q:"Стартапта алғашқы инвестиция тартудан бұрын не істеу керек?", options:["Толық өнім жасау","MVP жасап, нарықта тексеру","Жарнамаға миллион жұмсау","Кеңсе жалдау"], answer:1, e:"Инвесторлар MVP мен алғашқы қолданушыларды көргісі келеді."},
+{type:"single", lvl:"green", topic:"Startup іске қосу", q:"Бизнес-модель нені сипаттайды?", options:["Өнім түсін","Стартаптың қалай ақша табатынын","Команда мүшелерін","Сервер қуатын"], answer:1, e:"Бизнес-модель — табыс көзінің схемасы."},
+{type:"tf", lvl:"yellow", topic:"Startup іске қосу", q:"MVP-ге мүмкіндігінше көп функция қосу керек.", answer:false, e:"MVP минималды болуы керек."},
+{type:"single", lvl:"yellow", topic:"Startup іске қосу", q:"Startup іске қосудың екінші кезеңі қайсы?", options:["MVP жасау","Мақсатты аудиторияны зерттеу","Инвестиция тарту","Жарнама"], answer:1, e:"Алдымен мәселе, содан кейін аудитория зерттеледі."},
+{type:"single", lvl:"green", topic:"Жобаны алға жылжыту", q:"Маркетингтің 4P моделіне не кіреді?", options:["Product, Price, Place, Promotion","Plan, Profit, People, Power","Data, Model, Code, Test","Design, Deploy, Debug, Demo"], answer:0, e:"4P — өнім, баға, орын, жылжыту."},
+{type:"single", lvl:"green", topic:"Жобаны алға жылжыту", q:"SMM дегеніміз не?", options:["Әлеуметтік желілер арқылы жылжыту","Серверді басқару","Бағдарламалау тілі","Деректер қоры"], answer:0, e:"Social Media Marketing."},
+{type:"multi", lvl:"yellow", topic:"Жобаны алға жылжыту", q:"Контент-маркетинг құралдарына не жатады?", options:["Білім беру контенті","Ойын-сауық контенті","Шабыттандыру контенті","Серверді жаңарту"], answer:[0,1,2], e:"Сервер жаңарту — техникалық жұмыс."},
+{type:"single", lvl:"red", topic:"Жобаны алға жылжыту", q:"Аз бюджетпен стартапқа ең тиімді жылжыту әдісі қайсы?", options:["Билборд","Теледидар жарнамасы","Органикалық контент және микро-блогерлер","Газет жарнамасы"], answer:2, e:"Бұл — шығыны аз, тиімділігі жоғары әдіс."},
+{type:"single", lvl:"green", topic:"IT Startup жарнамасы", q:"CTA дегеніміз не?", options:["Жарнама түсі","Әрекетке шақыру","Жарнама бағасы","Компания логотипі"], answer:1, e:"Call To Action."},
+{type:"single", lvl:"yellow", topic:"IT Startup жарнамасы", q:"AIDA моделінің реті қандай?", options:["Action → Interest → Desire → Attention","Attention → Interest → Desire → Action","Attention → Action → Interest → Desire","Desire → Attention → Action → Interest"], answer:1, e:"Назар → Қызығушылық → Қалау → Әрекет."},
+{type:"tf", lvl:"green", topic:"IT Startup жарнамасы", q:"Жақсы слоган қысқа және есте қаларлық болуы керек.", answer:true, e:"3–7 сөз — тиімді ұзындық."}
+];
+
+/* ============== STATE ============== */
+const LS_KEY = "ai_startup_kz_v3";
+let state = loadState();
+function defaultState(){ return { topics:{}, generalTest:null, project:{}, reflection:{}, builders:{} }; }
+function loadState(){ try{ const raw = localStorage.getItem(LS_KEY); if(!raw) return defaultState(); return Object.assign(defaultState(), JSON.parse(raw)); }catch(e){ return defaultState(); } }
+function saveState(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(state)); }catch(e){} }
+function tState(id){ if(!state.topics[id]) state.topics[id] = {theory:false, tasks:{}, test:null}; return state.topics[id]; }
+function isTopicDone(id){ const t = TOPICS.find(x=>x.id===id); if(!t) return false; const s = tState(id); return !!(s.theory && t.tasks.every((_,i)=>s.tasks[i]) && s.test); }
+function isProjectComplete(){ const need = ["name","problem","relevance","solution","ai","ml","audience","mvp","marketing","ad","advantage","future"]; return need.every(k => state.project[k] && state.project[k].trim().length>0); }
+function progressPercent(){
+  let done = 0, total = 0;
+  TOPICS.forEach(t=>{ const s = tState(t.id); total += 3; if(s.theory) done++; if(t.tasks.every((_,i)=>s.tasks[i])) done++; if(s.test) done++; });
+  total += 2; if(state.generalTest) done++; if(isProjectComplete()) done++;
+  total += 1; if(state.reflection && state.reflection.q1) done++;
+  return Math.round(done/total*100);
+}
+
+function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;"); }
+function shuffle(a){ const r = a.slice(); for(let i=r.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [r[i],r[j]]=[r[j],r[i]]; } return r; }
+function grade(p){ if(p>=90) return {g:5, txt:"Өте жақсы"}; if(p>=70) return {g:4, txt:"Жақсы"}; if(p>=50) return {g:3, txt:"Қанағаттанарлық"}; return {g:2, txt:"Қайталау қажет"}; }
+function toast(msg){ const box = document.getElementById("toast"); const d = document.createElement("div"); d.className = "toast"; d.innerHTML = msg; box.appendChild(d); setTimeout(()=>{ d.style.opacity="0"; d.style.transform="translateX(60px)"; d.style.transition=".4s"; },2600); setTimeout(()=>d.remove(),3100); }
+function updateNavBar(){ document.getElementById("navBar").style.width = progressPercent() + "%"; }
+
+/* ============== ТЕСТ ============== */
+function questionHTML(q, i, prefix){
+  const name = prefix + "q" + i;
+  let body = "";
+  if(q.type === "single" || q.type === "multi"){
+    const inputType = q.type === "single" ? "radio" : "checkbox";
+    body = q.options.map((o,j)=>'<label class="opt"><input type="'+inputType+'" name="'+name+'" value="'+j+'"><span>'+esc(o)+'</span></label>').join("");
+  }
+  else if(q.type === "tf"){
+    body = '<label class="opt"><input type="radio" name="'+name+'" value="true"><span>✅ Дұрыс</span></label>' + '<label class="opt"><input type="radio" name="'+name+'" value="false"><span>❌ Бұрыс</span></label>';
+  }
+  else if(q.type === "match"){
+    if(!q._order) q._order = shuffle(q.pairs.map((p,j)=>j));
+    body = q.pairs.map((p,j)=>'<div class="item-row"><span class="match-left">'+esc(p[0])+'</span><select name="'+name+'-'+j+'"><option value="">— таңдаңыз —</option>'+q._order.map(k=>'<option value="'+k+'">'+esc(q.pairs[k][1])+'</option>').join("")+'</select></div>').join("");
+  }
+  const lvlBadge = q.lvl ? '<span class="level '+q.lvl+'">'+(q.lvl==="green"?"🟢 жеңіл":q.lvl==="yellow"?"🟡 орташа":"🔴 күрделі")+'</span>' : "";
+  return '<div class="q" data-q="'+i+'"><div class="q-head"><div class="q-num">'+(i+1)+'</div><div class="q-text">'+esc(q.q||q.question||"")+' '+lvlBadge+'</div></div>'+body+'<div class="explain" style="display:none"></div></div>';
+}
+
+function evaluateTest(qs, prefix, root, resultBox, onDone){
+  let score = 0;
+  const wrongTopics = {};
+  qs.forEach((q,i)=>{
+    const name = prefix + "q" + i;
+    const qEl = root.querySelector('[data-q="'+i+'"]');
+    if(!qEl) return;
+    let ok = false, correctTxt = "";
+    if(q.type === "single"){ const sel = root.querySelector('input[name="'+name+'"]:checked'); if(sel) ok = (+sel.value === q.answer); correctTxt = q.options[q.answer]; }
+    else if(q.type === "multi"){ const sel = Array.from(root.querySelectorAll('input[name="'+name+'"]:checked')).map(x=>+x.value).sort(); const ans = q.answer.slice().sort(); ok = sel.length === ans.length && sel.every((v,k)=>v===ans[k]); correctTxt = q.answer.map(v=>q.options[v]).join("; "); }
+    else if(q.type === "tf"){ const sel = root.querySelector('input[name="'+name+'"]:checked'); if(sel) ok = ((sel.value==="true") === q.answer); correctTxt = q.answer ? "Дұрыс" : "Бұрыс"; }
+    else if(q.type === "match"){ ok = q.pairs.every((p,j)=>{ const s = root.querySelector('select[name="'+name+'-'+j+'"]'); return s && s.value !== "" && (+s.value === j); }); correctTxt = q.pairs.map(p=>p[0]+" → "+p[1]).join("; "); }
+    if(ok) score++;
+    else if(q.topic) wrongTopics[q.topic] = (wrongTopics[q.topic]||0) + 1;
+    qEl.classList.add(ok ? "correct" : "wrong");
+    const ex = qEl.querySelector(".explain");
+    if(ex){ ex.style.display = "block"; ex.innerHTML = (ok ? "✅ <b>Дұрыс!</b> " : "❌ <b>Қате.</b> Дұрыс жауап: <b>" + esc(correctTxt) + "</b><br>") + (q.e ? "ℹ️ " + esc(q.e) : ""); }
+    qEl.querySelectorAll("input,select").forEach(el=>el.disabled = true);
+  });
+  const total = qs.length;
+  const percent = Math.round(score/total*100);
+  const gr = grade(percent);
+  let weakHtml = "";
+  const weak = Object.entries(wrongTopics).sort((a,b)=>b[1]-a[1]);
+  if(weak.length){ weakHtml = '<div style="margin-top:14px"><b>Қайталап оқу керек тақырыптар:</b><div class="row" style="margin-top:8px">' + weak.map(w=>'<span class="badge red">'+esc(w[0])+' · '+w[1]+' қате</span>').join("") + '</div></div>'; }
+  else { weakHtml = '<div style="margin-top:14px" class="badge green">🎉 Қате жоқ — тамаша нәтиже!</div>'; }
+  resultBox.innerHTML = '<div class="result"><div class="badge purple">Тест нәтижесі</div><div class="score-grid"><div class="score-box"><b>'+score+'/'+total+'</b><span>ДҰРЫС ЖАУАП</span></div><div class="score-box"><b>'+(total-score)+'</b><span>ҚАТЕ ЖАУАП</span></div><div class="score-box"><b>'+percent+'%</b><span>ПАЙЫЗДЫҚ</span></div><div class="score-box"><b>'+gr.g+'</b><span>БАҒА</span></div></div><p style="font-size:1.05rem"><b>Сіздің нәтижеңіз: '+score+'/'+total+'</b> · Баға: <b>'+gr.g+'</b> — '+gr.txt+'</p>'+weakHtml+'</div>';
+  resultBox.scrollIntoView({behavior:"smooth", block:"nearest"});
+  if(onDone) onDone(score, total, percent);
+  saveState();
+  updateNavBar();
+}
+
+/* ============== ТАПСЫРМАЛАР ============== */
+function taskHTML(task, ti, topicId){
+  let inner = "";
+  if(task.type === "sort"){ inner = task.items.map((it,i)=>'<div class="item-row" data-si="'+i+'"><span class="txt">'+esc(it.text)+'</span><select data-sel="'+i+'"><option value="">— таңдаңыз —</option>'+task.buckets.map((b,j)=>'<option value="'+j+'">'+esc(b)+'</option>').join("")+'</select></div>').join(""); }
+  else if(task.type === "match"){ if(!task._order) task._order = shuffle(task.pairs.map((p,j)=>j)); inner = task.pairs.map((p,j)=>'<div class="item-row" data-mi="'+j+'"><span class="match-left">'+esc(p[0])+'</span><select data-msel="'+j+'"><option value="">— таңдаңыз —</option>'+task._order.map(k=>'<option value="'+k+'">'+esc(task.pairs[k][1])+'</option>').join("")+'</select></div>').join(""); }
+  else if(task.type === "tf"){ inner = task.items.map((it,i)=>'<div class="item-row" data-tfi="'+i+'"><span class="txt">'+esc(it.text)+'</span><div class="tf-btns"><button type="button" data-tf="true" data-i="'+i+'">Дұрыс</button><button type="button" data-tf="false" data-i="'+i+'">Бұрыс</button></div></div>').join(""); }
+  else if(task.type === "order"){ if(!task._state) task._state = shuffle(task.items.map((_,i)=>i)); inner = '<div data-order-list="'+ti+'">' + task._state.map((origIdx, pos)=>'<div class="item-row" data-oi="'+pos+'"><span class="order-num">'+(pos+1)+'</span><span class="txt">'+esc(task.items[origIdx])+'</span><button type="button" class="mini-btn" data-move="up" data-pos="'+pos+'">▲</button><button type="button" class="mini-btn" data-move="down" data-pos="'+pos+'">▼</button></div>').join("") + '</div>'; }
+  else if(task.type === "single"){ inner = '<p style="color:#4b5563;margin-bottom:12px;padding:12px 14px;background:rgba(220,38,38,.05);border-radius:12px;border-left:3px solid #dc2626">' + esc(task.scenario) + '</p>' + task.options.map((o,j)=>'<label class="opt"><input type="radio" name="task_'+topicId+'_'+ti+'" value="'+j+'"><span>'+esc(o)+'</span></label>').join(""); }
+  else if(task.type === "builder"){ inner = task.fields.map(f=>{ let input = ""; if(f.type === "textarea") input = '<textarea data-bf="'+f.id+'" placeholder="'+esc(f.ph||"")+'"></textarea>'; else if(f.type === "select") input = '<select data-bf="'+f.id+'"><option value="">— таңдаңыз —</option>' + f.options.map(o=>'<option>'+esc(o)+'</option>').join("") + '</select>'; else input = '<input type="text" data-bf="'+f.id+'" placeholder="'+esc(f.ph||"")+'">'; return '<div class="field"><label>'+esc(f.label)+'</label>'+input+'</div>'; }).join(""); }
+  return '<div class="task" data-task="'+ti+'"><div class="task-head"><div class="ico">'+(task.icon||"✏️")+'</div><div><h3>'+esc(task.title)+'</h3><p class="small muted">'+esc(task.instruction)+'</p></div></div>'+inner+'<div class="spacer-sm"></div><button class="btn sm" data-check="'+ti+'">✔ Тексеру</button> <div class="feedback" data-fb="'+ti+'"></div><div data-bres="'+ti+'"></div></div>';
+}
+
+function bindTasks(root, topicId){
+  const topic = TOPICS.find(t=>t.id===topicId);
+  root.querySelectorAll("[data-tf]").forEach(btn=>{ btn.addEventListener("click", ()=>{ const i = +btn.dataset.i; const wrap = root.querySelector('[data-tfi="'+i+'"]'); wrap.querySelectorAll("[data-tf]").forEach(b=>b.classList.remove("sel")); btn.classList.add("sel"); }); });
+  root.querySelectorAll("[data-move]").forEach(btn=>{ btn.addEventListener("click", ()=>{ const pos = +btn.dataset.pos; const dir = btn.dataset.move; const list = btn.closest('[data-order-list]'); const ti = +list.dataset.orderList; const st = topic.tasks[ti]._state; const np = dir === "up" ? pos-1 : pos+1; if(np < 0 || np >= st.length) return; [st[pos], st[np]] = [st[np], st[pos]]; renderTopicView(topicId, true); }); });
+  root.querySelectorAll("[data-check]").forEach(btn=>{ btn.addEventListener("click", ()=>{ checkTask(root, topic, +btn.dataset.check, topicId); }); });
+  root.querySelectorAll("[data-bf]").forEach(inp=>{ inp.addEventListener("input", ()=>{ const ti = +inp.closest("[data-task]").dataset.task; const key = "t"+topicId+"_task"+ti; if(!state.builders[key]) state.builders[key] = {}; state.builders[key][inp.dataset.bf] = inp.value; saveState(); }); const key = "t"+topicId+"_task"+ (+inp.closest("[data-task]").dataset.task); const saved = (state.builders[key]||{})[inp.dataset.bf]; if(saved) inp.value = saved; });
+}
+
+function checkTask(root, topic, ti, topicId){
+  const task = topic.tasks[ti];
+  const tEl = root.querySelector('[data-task="'+ti+'"]');
+  const fb = tEl.querySelector('[data-fb="'+ti+'"]');
+  let ok = false;
+  if(task.type === "sort"){ let right = 0; task.items.forEach((it,i)=>{ const row = tEl.querySelector('[data-si="'+i+'"]'); const sel = tEl.querySelector('[data-sel="'+i+'"]'); const good = sel.value !== "" && (+sel.value === it.b); row.classList.toggle("correct", good); row.classList.toggle("wrong", !good); if(good) right++; }); ok = right === task.items.length; fb.className = "feedback " + (ok?"ok":"no"); fb.textContent = ok ? "✅ Барлығы дұрыс! ("+right+"/"+task.items.length+")" : "Дұрыс жауаптар: "+right+"/"+task.items.length+". Қателерді түзетіп, қайта тексеріңіз."; }
+  else if(task.type === "match"){ let right = 0; task.pairs.forEach((p,j)=>{ const row = tEl.querySelector('[data-mi="'+j+'"]'); const sel = tEl.querySelector('[data-msel="'+j+'"]'); const good = sel.value !== "" && (+sel.value === j); row.classList.toggle("correct", good); row.classList.toggle("wrong", !good); if(good) right++; }); ok = right === task.pairs.length; fb.className = "feedback " + (ok?"ok":"no"); fb.textContent = ok ? "✅ Барлық жұп дұрыс!" : "Дұрыс жұптар: "+right+"/"+task.pairs.length; }
+  else if(task.type === "tf"){ let right = 0; task.items.forEach((it,i)=>{ const row = tEl.querySelector('[data-tfi="'+i+'"]'); const sel = row.querySelector("[data-tf].sel"); if(!sel){ row.classList.add("wrong"); return; } const good = (sel.dataset.tf === "true") === it.a; row.classList.toggle("correct", good); row.classList.toggle("wrong", !good); if(good) right++; }); ok = right === task.items.length; fb.className = "feedback " + (ok?"ok":"no"); fb.innerHTML = ok ? "✅ Барлығы дұрыс!" : "Дұрыс: "+right+"/"+task.items.length+"<br><span class='muted'>" + task.items.map((it,i)=> (i+1)+") "+(it.a?"Дұрыс":"Бұрыс")+" — "+esc(it.e)).join("<br>") + "</span>"; }
+  else if(task.type === "order"){ const st = task._state; ok = st.every((orig,pos)=>orig === pos); fb.className = "feedback " + (ok?"ok":"no"); fb.textContent = ok ? "✅ Реті дұрыс!" : "❌ Реті қате. ▲▼ батырмалары арқылы түзетіңіз."; tEl.querySelectorAll("[data-oi]").forEach(row=>{ const pos = +row.dataset.oi; row.classList.toggle("correct", st[pos]===pos); row.classList.toggle("wrong", st[pos]!==pos); }); }
+  else if(task.type === "single"){ const sel = tEl.querySelector('input[type=radio]:checked'); if(!sel){ fb.className="feedback no"; fb.textContent="Жауап таңдаңыз."; return; } ok = (+sel.value === task.answer); fb.className = "feedback " + (ok?"ok":"no"); fb.innerHTML = ok ? "✅ Дұрыс! " + esc(task.explain) : "❌ Қате. " + esc(task.explain); tEl.querySelectorAll(".opt").forEach(o=>{ const inp = o.querySelector("input"); if(+inp.value === task.answer) o.style.borderColor = "rgba(22,163,74,.7)"; else if(inp.checked) o.style.borderColor = "rgba(220,38,38,.7)"; }); }
+  else if(task.type === "builder"){ const key = "t"+topicId+"_task"+ti; const data = state.builders[key] || {}; const filled = task.fields.every(f => (data[f.id]||"").trim().length>0); if(!filled){ fb.className = "feedback no"; fb.textContent = "Барлық өрісті толтырыңыз."; return; } ok = true; fb.className = "feedback ok"; fb.textContent = "✅ " + task.resultTitle + " дайын!"; const box = tEl.querySelector('[data-bres="'+ti+'"]'); box.innerHTML = '<div class="project-card" style="margin-top:14px"><div class="pc-head"><h2>'+esc(task.resultTitle)+'</h2></div><div class="pc-body">' + task.fields.map(f=>'<div class="pc-item"><b>'+esc(f.label.replace(/^\d+\.\s*/,""))+'</b><span>'+esc(data[f.id])+'</span></div>').join("") + '</div></div>'; }
+  const st = tState(topicId);
+  if(ok){ st.tasks[ti] = true; saveState(); }
+}
+
+/* ============== КӨРІНІСТЕР ============== */
+function go(view, param){
+  document.querySelectorAll("#navLinks button").forEach(b=>{ b.classList.toggle("active", b.dataset.nav === view || (view==="topic" && b.dataset.nav==="topics")); });
+  const app = document.getElementById("app");
+  if(view==="home") app.innerHTML = viewHome();
+  else if(view==="topics") app.innerHTML = viewTopics();
+  else if(view==="topic"){ renderTopicView(param); return; }
+  else if(view==="media") app.innerHTML = viewMedia();
+  else if(view==="general") app.innerHTML = viewGeneral();
+  else if(view==="project") app.innerHTML = viewProject();
+  else if(view==="conclusion") app.innerHTML = viewConclusion();
+  if(view==="general") bindGeneral();
+  if(view==="project") bindProject();
+  if(view==="conclusion") bindReflection();
+  updateNavBar();
+  window.scrollTo({top:0});
+}
+
+function viewHome(){
+  const p = progressPercent();
+  return '' +
+  '<section class="hero">' +
+    '<div class="badge">11-сынып оқушыларына арналған</div>' +
+    '<h1>Жасанды интеллект және <span class="grad-text">IT Startup</span></h1>' +
+    '<p class="lead">Заманауи интерактивті электрондық оқу құралы. Теория → түсіну → интерактивті тапсырма → өзін-өзі тексеру → тест → нәтиже → келесі тақырып.</p>' +
+    '<div class="quote">«Бүгінгі цифрлық әлемде жасанды интеллект тек технология емес, жаңа идеялар мен мүмкіндіктердің негізіне айналды. Бұл курста сен ЖИ технологияларын зерттеп қана қоймай, өз IT startup идеяңды әзірлеп, оны таныстыруды үйренесің.»</div>' +
+    '<div class="spacer"></div>' +
+    '<div class="row">' +
+      '<button class="btn" onclick="go(\'topic\', 1)">🚀 Курсты бастау</button>' +
+      '<button class="btn ghost" onclick="go(\'topics\')">📚 Барлық тақырыптар</button>' +
+      '<button class="btn ghost" onclick="go(\'media\')">🎬 Медиатека</button>' +
+    '</div>' +
+    '<div class="spacer"></div>' +
+    '<div class="grid g4">' +
+      '<div class="stat"><b>8</b><span>НЕГІЗГІ ТАҚЫРЫП</span></div>' +
+      '<div class="stat"><b>30+</b><span>ЖАЛПЫ ТЕСТ СҰРАҒЫ</span></div>' +
+      '<div class="stat"><b>8</b><span>AI-ВИДЕО САБАҚ</span></div>' +
+      '<div class="stat"><b>'+MEDIA.aiTools.length+'</b><span>AI ВИДЕО-ҚҰРАЛ</span></div>' +
+    '</div>' +
+  '</section>' +
+  '<div class="spacer"></div>' +
+  '<div class="grid g2">' +
+    '<div class="card">' +
+      '<h2>🎯 Курстың мақсаты</h2>' +
+      '<p>11-сынып оқушыларына жасанды интеллект, машиналық оқыту, нейрондық желілер және IT startup негіздерін теориялық және практикалық түрде меңгерту.</p>' +
+      '<div class="spacer-sm"></div>' +
+      '<h3>Курстың міндеттері</h3>' +
+      '<ul style="margin-left:20px;color:#4b5563">' +
+        '<li>ЖИ мен ML негізгі ұғымдарын түсіндіру;</li>' +
+        '<li>Нейрондық желінің құрылымы мен жұмыс принципін меңгерту;</li>' +
+        '<li>Нейрондық желіні жобалау дағдысын қалыптастыру;</li>' +
+        '<li>IT startup идеясын әзірлеп, MVP анықтауды үйрету;</li>' +
+        '<li>Жобаны жылжыту мен жарнама жасау дағдыларын дамыту;</li>' +
+        '<li>Өз IT жобасын қорғауға дайындау.</li>' +
+      '</ul>' +
+    '</div>' +
+    '<div class="card">' +
+      '<h2>📚 Курста нені үйренесің?</h2>' +
+      '<div class="concept-grid">' +
+        '<div class="concept"><b>🤖 ЖИ негіздері</b><span>Жасанды интеллект және оның жұмыс принципі</span></div>' +
+        '<div class="concept"><b>📊 Машиналық оқыту</b><span>Деректер, белгілер, жіктеу, регрессия</span></div>' +
+        '<div class="concept"><b>🧠 Нейрондық желілер</b><span>Нейрон, қабаттар, салмақтар, оқыту</span></div>' +
+        '<div class="concept"><b>🛠️ Желіні жобалау</b><span>Мәселеден модельді жетілдіруге дейін</span></div>' +
+        '<div class="concept"><b>🚀 Startup құру</b><span>Идея, аудитория, MVP, бизнес-модель</span></div>' +
+        '<div class="concept"><b>📈 Жобаны жылжыту</b><span>Маркетинг, SMM, контент-маркетинг</span></div>' +
+        '<div class="concept"><b>📢 IT startup жарнамасы</b><span>Slogan, постер, CTA, AIDA</span></div>' +
+        '<div class="concept"><b>🏁 Жеке IT жобасы</b><span>Толық жоба әзірлеу және қорғау</span></div>' +
+      '</div>' +
+    '</div>' +
+  '</div>';
+}
+
+function viewTopics(){
+  return '<h1>📚 Оқу бөлімдері</h1>' +
+    '<p class="muted">8 негізгі тақырып. Әр тақырып: мақсат → AI-видео → теория (схемалармен + QR) → ұғымдар → мысалдар → тапсырмалар → тест.</p>' +
+    '<div class="spacer"></div>' +
+    '<div class="grid g3">' +
+    TOPICS.map(t=>{
+      const s = tState(t.id);
+      const done = isTopicDone(t.id);
+      const tasksDone = t.tasks.filter((_,i)=>s.tasks[i]).length;
+      return '<div class="card hoverable topic-card" onclick="go(\'topic\','+t.id+')">' +
+        '<div class="num">'+t.id+'</div>' +
+        '<div class="badge '+(done?'green':'purple')+'">'+t.icon+' '+(done?'Аяқталды':'Тақырып '+t.id)+'</div>' +
+        '<h3>'+esc(t.title)+'</h3>' +
+        '<p class="small muted">'+esc(t.goal)+'</p>' +
+        '<div class="meta">' +
+          '<span class="pill '+(s.theory?'ok':'')+'">📖 Теория</span>' +
+          '<span class="pill">🤖 AI-видео</span>' +
+          '<span class="pill '+(tasksDone===t.tasks.length?'ok':'')+'">✏️ '+tasksDone+'/'+t.tasks.length+'</span>' +
+          '<span class="pill '+(s.test?'ok':'')+'">📝 '+(s.test?'✅':'—')+'</span>' +
+        '</div>' +
+      '</div>';
+    }).join("") +
+    '</div>' +
+    '<div class="spacer"></div>' +
+    '<div class="card center">' +
+      '<h2>🏁 Барлық тақырып аяқталды ма?</h2>' +
+      '<p class="muted">Жалпы қорытынды тестке өтіп, біліміңді сынап көр.</p>' +
+      '<div class="spacer-sm"></div>' +
+      '<button class="btn" onclick="go(\'general\')">🎯 Жалпы тестке өту</button>' +
+    '</div>';
+}
+
+function aiVideoBlock(t){
+  if(!t.aivideo) return "";
+  const v = t.aivideo;
+  return '<div class="ai-video-box">' +
+    '<h4>AI-түсіндірме видеосы <span class="ai-video-badge">🤖 AI-generated</span></h4>' +
+    '<div class="ai-video-player">' +
+      '<video controls preload="metadata" poster="'+esc(v.poster||"")+'">' +
+        '<source src="'+esc(v.src)+'" type="video/mp4">' +
+        'Браузеріңіз видеоны қолдамайды. ' +
+      '</video>' +
+      '<div class="ai-video-fallback" id="aiFb-'+t.id+'">' +
+        '<div class="icon">🎬</div>' +
+        '<b>AI-видео әлі жүктелмеген</b>' +
+        '<small>Осы жерге <code>'+esc(v.src)+'</code> файлын қосыңыз. Видеоны Synthesia, HeyGen немесе D-ID құралдары арқылы жасауға болады.</small>' +
+      '</div>' +
+    '</div>' +
+    '<p class="ai-video-desc">'+esc(v.desc||"")+'</p>' +
+  '</div>';
+}
+
+function renderTopicView(id, keepScroll){
+  const t = TOPICS.find(x=>x.id===id);
+  if(!t) return;
+  const s = tState(id);
+  const app = document.getElementById("app");
+
+  const theoryHTML = t.theory.map(b=>{
+    if(b.t === "h") return '<h3 style="margin-top:22px;margin-bottom:6px;color:#991b1b">'+esc(b.c)+'</h3>';
+    if(b.t === "p") return '<p>'+esc(b.c)+'</p>';
+    if(b.t === "list") return '<ul>'+b.c.map(li=>'<li>'+esc(li)+'</li>').join("")+'</ul>';
+    if(b.t === "concept") return '<div class="concept-grid">'+b.items.map(it=>'<div class="concept"><b>'+esc(it.k)+'</b><span>'+esc(it.v)+'</span></div>').join("")+'</div>';
+    if(b.t === "remember") return '<div class="block remember"><h3>💡 Есте сақта!</h3><p>'+esc(b.c)+'</p></div>';
+    if(b.t === "example") return '<div class="block example"><h3>🔍 Мысал</h3><p>'+esc(b.c)+'</p></div>';
+    if(b.t === "conclusion") return '<div class="block conclusion"><h3>✅ Қорытынды</h3><p>'+esc(b.c)+'</p></div>';
+    if(b.t === "svg") return '<div class="svg-box">'+(b.title?'<h4>'+esc(b.title)+'</h4>':'')+b.svg+'</div>';
+    if(b.t === "photo"){
+      return '<div class="svg-box"><h4>'+(b.title||'Фото-галерея')+'</h4><div class="photo-grid" style="margin-top:6px">'+
+        b.photos.map(p=>'<div class="photo-card"><img src="'+esc(p.u)+'" alt="'+esc(p.t)+'" loading="lazy" onerror="this.style.background=\'linear-gradient(135deg,#ef4444,#991b1b)\';this.style.minHeight=\'180px\'"><div class="caption"><b>'+esc(p.t)+'</b>'+esc(p.d)+'</div></div>').join("")+
+        '</div></div>';
+    }
+    return "";
+  }).join("");
+
+  const qrHTML = (t.qr && t.qr.length) ?
+    '<div class="qr-inline"><h4>🔗 Пайдалы сілтемелер мен QR-кодтар</h4><div class="qr-inline-grid">'+
+      t.qr.map(q=>'<div class="qr-mini"><img src="'+qrImg(q.u,140)+'" alt="QR: '+esc(q.t)+'" loading="lazy"><b>'+esc(q.t)+'</b><a href="'+esc(q.u)+'" target="_blank" rel="noopener">Ашу →</a></div>').join("")+
+    '</div></div>' : "";
+
+  const prev = id>1 ? id-1 : null;
+  const next = id<8 ? id+1 : null;
+
+  app.innerHTML = '' +
+    '<div class="row" style="margin-bottom:14px">' +
+      '<button class="btn ghost sm" onclick="go(\'topics\')">← Тақырыптар</button>' +
+      '<span class="badge">'+t.icon+' '+id+'-тақырып</span>' +
+      (s.test ? '<span class="badge green">Тест: '+s.test.score+'/'+s.test.total+'</span>' : '') +
+    '</div>' +
+    '<div class="card" style="margin-bottom:18px">' +
+      '<h1>'+esc(t.title)+'</h1>' +
+      '<div class="spacer-sm"></div>' +
+      '<div class="block example" style="margin:0"><h3>🎯 Оқу мақсаты</h3><p>'+esc(t.goal)+'</p></div>' +
+    '</div>' +
+    aiVideoBlock(t) +
+    '<div class="card" style="margin-bottom:18px">' +
+      '<div class="row" style="margin-bottom:12px">' +
+        '<h2 style="margin:0">📖 Теориялық бөлім</h2>' +
+        '<span class="badge cyan" style="margin-left:auto">Схемалар + Фото + QR</span>' +
+      '</div>' +
+      theoryHTML +
+      qrHTML +
+    '</div>' +
+    '<div class="card" style="margin-bottom:18px">' +
+      '<h2>✏️ Интерактивті тапсырмалар</h2>' +
+      '<p class="muted small">Әр тапсырманы орындап, «Тексеру» батырмасын бас. Нәтиже автоматты сақталады.</p>' +
+      '<div class="spacer-sm"></div>' +
+      t.tasks.map((task,ti)=>taskHTML(task, ti, id)).join("") +
+    '</div>' +
+    '<div class="card" style="margin-bottom:18px">' +
+      '<h2>📝 Өзін-өзі тексеру тесті</h2>' +
+      '<p class="muted small">'+t.test.length+' сұрақ. Тест автоматты тексеріледі.</p>' +
+      '<div class="spacer-sm"></div>' +
+      '<div id="topicTest">' + t.test.map((q,i)=>questionHTML(q,i,"t"+id+"_")).join("") + '</div>' +
+      '<div class="spacer-sm"></div>' +
+      '<button class="btn" id="topicTestBtn">✅ Тестті аяқтау</button>' +
+      '<div id="topicTestResult"></div>' +
+    '</div>' +
+    '<div class="card row" style="justify-content:space-between">' +
+      (prev ? '<button class="btn ghost" onclick="go(\'topic\','+prev+')">← '+prev+'-тақырып</button>' : '<span></span>') +
+      (next ? '<button class="btn" onclick="go(\'topic\','+next+')">Келесі тақырыпқа өту →</button>' : '<button class="btn" onclick="go(\'general\')">🎯 Жалпы тестке өту →</button>') +
+    '</div>';
+
+  tState(id).theory = true;
+  saveState();
+
+  // AI video fallback — if video fails or empty
+  const vEl = document.querySelector('.ai-video-box video');
+  if(vEl){
+    const srcEl = vEl.querySelector('source');
+    const fbEl = document.getElementById('aiFb-'+id);
+    const showFb = ()=>{ if(fbEl) fbEl.style.display = 'flex'; };
+    const hideFb = ()=>{ if(fbEl) fbEl.style.display = 'none'; };
+    vEl.addEventListener('loadeddata', hideFb);
+    vEl.addEventListener('error', showFb);
+    srcEl && srcEl.addEventListener('error', showFb);
+    // Show fallback by default (until video loads)
+    showFb();
+  }
+
+  bindTasks(app, id);
+  const testBtn = document.getElementById("topicTestBtn");
+  const resBox = document.getElementById("topicTestResult");
+  const testRoot = document.getElementById("topicTest");
+
+  if(s.test){
+    testBtn.disabled = true;
+    testBtn.textContent = "Тест тапсырылды ✓";
+    resBox.innerHTML = '<div class="result"><div class="badge green">Аяқталды</div><p style="margin-top:10px">Сіздің нәтижеңіз: <b>'+s.test.score+'/'+s.test.total+'</b> · '+s.test.percent+'% · Баға: <b>'+grade(s.test.percent).g+'</b></p><button class="btn ghost sm" id="retakeBtn" style="margin-top:10px">🔄 Қайта тапсыру</button></div>';
+    const rb = document.getElementById("retakeBtn");
+    if(rb) rb.addEventListener("click", ()=>{ tState(id).test = null; saveState(); renderTopicView(id); });
+  } else {
+    testBtn.addEventListener("click", ()=>{
+      evaluateTest(t.test, "t"+id+"_", testRoot, resBox, (score,total,percent)=>{
+        tState(id).test = {score, total, percent};
+        saveState();
+        testBtn.disabled = true;
+        testBtn.textContent = "Тест тапсырылды ✓";
+        const rb = document.getElementById("retakeBtn");
+        if(rb) rb.addEventListener("click", ()=>{ tState(id).test = null; saveState(); renderTopicView(id); });
+      });
+    });
+  }
+  updateNavBar();
+  if(!keepScroll) window.scrollTo({top:0});
+}
+
+/* ============== МЕДИАТЕКА ============== */
+function viewMedia(){
+  return '' +
+    '<h1>🎬 Медиатека</h1>' +
+    '<p class="muted">AI-түсіндірме видеолары, AI видео-құралдары, фото-галерея және QR-кодтар арқылы сыртқы ресурстарға жылдам қатынау.</p>' +
+    '<div class="spacer"></div>' +
+
+    '<section class="media-section">' +
+      '<h2><span class="ico-sq">🤖</span>AI-видео қалай жасалады?</h2>' +
+      '<p>Төмендегі құралдар мәтінді AI-аватар оқитын видеога айналдырады. Әр тақырыпқа AI-түсіндірме видеосын жасау үшін:</p>' +
+      '<div class="card" style="margin-bottom:20px">' +
+        '<ol style="margin-left:22px;color:#4b5563;line-height:1.9">' +
+          '<li>Төмендегі құралдардың бірінде тіркеліңіз (Synthesia, HeyGen, D-ID).</li>' +
+          '<li>AI-аватарды таңдап, тіл ретінде <b>қазақ немесе орыс тілін</b> орнатыңыз.</li>' +
+          '<li>Тақырыптың теориялық мәтінін дауыстауға енгізіңіз (әр тақырыптағы <code>aivideo.desc</code> дайын).</li>' +
+          '<li>Видеоны <b>MP4</b> форматында жүктеп алыңыз.</li>' +
+          '<li>Файлды жобаңыздағы <code>videos/</code> бумасына салыңыз: <code>topic1-ai-intro.mp4</code>, <code>topic2-ml.mp4</code> және т.б.</li>' +
+          '<li>Сайтты жаңартыңыз — видео автоматты түрде әр тақырыпта көрінеді.</li>' +
+        '</ol>' +
+      '</div>' +
+      '<div class="tool-grid">' +
+        MEDIA.aiTools.map(t=>
+          '<div class="tool-card"><div class="ttl"><span class="ic">'+t.ic+'</span>'+esc(t.t)+'</div><div class="desc">'+esc(t.d)+'</div><a href="'+esc(t.u)+'" target="_blank" rel="noopener">Құралға өту →</a></div>'
+        ).join("") +
+      '</div>' +
+    '</section>' +
+
+    '<section class="media-section">' +
+      '<h2><span class="ico-sq">🎥</span>YouTube видео сабақтар</h2>' +
+      '<p>YouTube-тегі ең танымал түсіндірме видеолар. Плеерге тікелей кіре аласыз.</p>' +
+      '<div class="video-grid">' +
+        MEDIA.videos.map(v=>
+          '<div class="video-card">' +
+            '<div class="video-frame"><iframe src="https://www.youtube.com/embed/'+v.yt+'" title="'+esc(v.title)+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>' +
+            '<div class="video-info"><span class="meta">'+esc(v.meta)+'</span><b>'+esc(v.title)+'</b><span>'+esc(v.desc)+'</span></div>' +
+          '</div>'
+        ).join("") +
+      '</div>' +
+    '</section>' +
+
+    '<section class="media-section">' +
+      '<h2><span class="ico-sq">🖼️</span>Фото-галерея</h2>' +
+      '<p>ЖИ, нейрондық желілер, стартап және технология туралы иллюстрациялар.</p>' +
+      '<div class="photo-grid">' +
+        MEDIA.photos.map(p=>
+          '<div class="photo-card"><img src="'+esc(p.u)+'" alt="'+esc(p.t)+'" loading="lazy" onerror="this.style.background=\'linear-gradient(135deg,#ef4444,#991b1b)\';this.style.minHeight=\'230px\'"><div class="caption"><b>'+esc(p.t)+'</b>'+esc(p.d)+'</div></div>'
+        ).join("") +
+      '</div>' +
+    '</section>' +
+
+    '<section class="media-section">' +
+      '<h2><span class="ico-sq">📱</span>QR-кодтар және пайдалы сілтемелер</h2>' +
+      '<p>Телефон камерасын QR-кодқа бағыттап, ресурсқа бірден өтіңіз. Немесе тікелей сілтеме арқылы ашыңыз.</p>' +
+      '<div class="qr-grid">' +
+        MEDIA.qr.map(q=>
+          '<div class="qr-card"><img src="'+qrImg(q.u,180)+'" alt="QR: '+esc(q.t)+'" loading="lazy"><b>'+esc(q.t)+'</b><span>'+esc(q.d)+'</span><a href="'+esc(q.u)+'" target="_blank" rel="noopener">Сілтемені ашу →</a></div>'
+        ).join("") +
+      '</div>' +
+    '</section>' +
+
+    '<div class="card center">' +
+      '<h2>📖 Пайдалы кеңестер</h2>' +
+      '<p class="muted">QR-кодты сканерлеу үшін телефон камерасын ашып, кодқа бағыттаңыз. Кейбір телефондарда арнайы сканер қосымшасы қажет болуы мүмкін.</p>' +
+      '<div class="spacer-sm"></div>' +
+      '<div class="row" style="justify-content:center">' +
+        '<button class="btn" onclick="go(\'topics\')">📚 Тақырыптарға өту</button>' +
+      '</div>' +
+    '</div>';
+}
+
+function viewGeneral(){
+  const g = state.generalTest;
+  return '<h1>🎯 Жалпы қорытынды тест</h1>' +
+    '<p class="muted">Барлық 8 тақырыпты қамтитын '+GENERAL_TEST.length+' сұрақ. Қиындық деңгейлері: 🟢 жеңіл · 🟡 орташа · 🔴 күрделі</p>' +
+    '<div class="spacer"></div>' +
+    (g ? '<div class="card" style="margin-bottom:18px"><div class="badge green">Аяқталды</div><p style="margin-top:10px">Соңғы нәтиже: <b>'+g.score+'/'+g.total+'</b> · '+g.percent+'% · Баға: <b>'+g.grade+'</b></p><button class="btn ghost sm" onclick="resetGeneral()" style="margin-top:10px">🔄 Қайта тапсыру</button></div>' : '') +
+    '<div class="card">' +
+      '<div id="genTest">' + GENERAL_TEST.map((q,i)=>questionHTML(q,i,"g_")).join("") + '</div>' +
+      '<div class="spacer-sm"></div>' +
+      '<button class="btn" id="genBtn">✅ Тестті аяқтау</button>' +
+      '<div id="genResult"></div>' +
+    '</div>';
+}
+function resetGeneral(){ state.generalTest = null; saveState(); go("general"); }
+function bindGeneral(){
+  const btn = document.getElementById("genBtn");
+  const box = document.getElementById("genResult");
+  const root = document.getElementById("genTest");
+  if(!btn) return;
+  if(state.generalTest){ btn.disabled = true; btn.textContent = "Тест тапсырылды ✓"; }
+  btn.addEventListener("click", ()=>{
+    evaluateTest(GENERAL_TEST, "g_", root, box, (score,total,percent)=>{
+      const gr = grade(percent);
+      state.generalTest = {score, total, percent, grade:gr.g};
+      saveState();
+      btn.disabled = true; btn.textContent = "Тест тапсырылды ✓";
+    });
+  });
+}
+
+const PROJECT_FIELDS = [
+  {k:"name", label:"1. Startup атауы", type:"text"},
+  {k:"problem", label:"2. Мәселе", type:"textarea"},
+  {k:"relevance", label:"3. Мәселенің өзектілігі", type:"textarea"},
+  {k:"solution", label:"4. Ұсынылатын шешім", type:"textarea"},
+  {k:"ai", label:"5. Жасанды интеллектті қолдану", type:"textarea"},
+  {k:"ml", label:"6. Машиналық оқыту элементтері", type:"textarea"},
+  {k:"audience", label:"7. Мақсатты аудитория", type:"textarea"},
+  {k:"mvp", label:"8. MVP", type:"textarea"},
+  {k:"marketing", label:"9. Маркетинг жоспары", type:"textarea"},
+  {k:"ad", label:"10. Жарнама", type:"textarea"},
+  {k:"advantage", label:"11. Жобаның артықшылығы", type:"textarea"},
+  {k:"future", label:"12. Жобаның болашағы", type:"textarea"}
+];
+
+function viewProject(){
+  const hasAny = PROJECT_FIELDS.some(f => (state.project[f.k]||"").trim());
+  return '<h1>🏁 Қорытынды IT Startup жобасы</h1>' +
+    '<p class="muted">Барлық алдыңғы тақырыптар бойынша біліміңді біріктіріп, өз IT startup жобаңды әзірле.</p>' +
+    '<div class="spacer"></div>' +
+    '<div class="card" style="margin-bottom:18px">' +
+      '<h2>📝 Жоба формасы</h2>' +
+      '<p class="muted small">12 пунктті толтыр. Мәліметтер автоматты түрде сақталады.</p>' +
+      '<div class="spacer-sm"></div>' +
+      PROJECT_FIELDS.map(f=>{
+        const v = state.project[f.k] || "";
+        const input = f.type === "textarea" ? '<textarea data-pf="'+f.k+'" placeholder="Жазыңыз...">'+esc(v)+'</textarea>' : '<input type="text" data-pf="'+f.k+'" value="'+esc(v)+'" placeholder="Жазыңыз...">';
+        return '<div class="field"><label>'+esc(f.label)+'</label>'+input+'</div>';
+      }).join("") +
+      '<div class="spacer-sm"></div>' +
+      '<button class="btn" id="buildProject">🚀 Жоба карточкасын құру</button>' +
+      '<button class="btn ghost" id="clearProject" style="margin-left:8px">🗑 Тазалау</button>' +
+    '</div>' +
+    '<div id="projectOut">' + (hasAny ? projectCardHTML() : '') + '</div>';
+}
+
+function projectCardHTML(){
+  return '<div class="project-card">' +
+    '<div class="pc-head">' +
+      '<div class="badge purple">IT Startup жобасы</div>' +
+      '<h1 style="margin-top:10px">'+esc(state.project.name || "Атауы жоқ")+'</h1>' +
+      '<p class="muted">«Жасанды интеллект және IT Startup» курсының қорытынды жобасы</p>' +
+    '</div>' +
+    '<div class="pc-body">' +
+      PROJECT_FIELDS.filter(f=>f.k!=="name").map(f=>'<div class="pc-item"><b>'+esc(f.label.replace(/^\d+\.\s*/,""))+'</b><span>'+esc(state.project[f.k]||"—")+'</span></div>').join("") +
+    '</div>' +
+    '<div style="padding:20px 24px 26px">' +
+      '<button class="btn" id="defendBtn">🎤 Жобаны қорғау режимі</button>' +
+    '</div>' +
+  '</div>';
+}
+
+function bindProject(){
+  document.querySelectorAll("[data-pf]").forEach(inp=>{ inp.addEventListener("input", ()=>{ state.project[inp.dataset.pf] = inp.value; saveState(); }); });
+  const b = document.getElementById("buildProject");
+  const out = document.getElementById("projectOut");
+  if(b) b.addEventListener("click", ()=>{ if(!isProjectComplete()){ toast("⚠️ Барлық 12 пунктті толтырыңыз"); return; } out.innerHTML = projectCardHTML(); out.scrollIntoView({behavior:"smooth", block:"start"}); bindDefend(); });
+  const c = document.getElementById("clearProject");
+  if(c) c.addEventListener("click", ()=>{ if(confirm("Жоба мәліметтерін тазалайсыз ба?")){ state.project = {}; saveState(); go("project"); } });
+  bindDefend();
+}
+
+function bindDefend(){
+  const d = document.getElementById("defendBtn");
+  if(!d) return;
+  d.addEventListener("click", ()=>{
+    const p = state.project;
+    const w = window.open("", "_blank");
+    if(!w){ toast("Браузер жаңа терезені бөгеді"); return; }
+    const rows = PROJECT_FIELDS.map(f=>'<div class="row"><b>'+esc(f.label)+'</b><span>'+esc(p[f.k]||"—")+'</span></div>').join("");
+    w.document.write('<!DOCTYPE html><html lang="kk"><head><meta charset="UTF-8"><title>Жобаны қорғау — '+esc(p.name||"")+'</title><style>body{font-family:Segoe UI,system-ui,sans-serif;background:linear-gradient(150deg,#ffffff,#fef2f2);color:#1a1a2e;padding:40px;line-height:1.6}h1{font-size:2.4rem;background:linear-gradient(135deg,#ef4444,#991b1b);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:10px}.lead{color:#6b7280;margin-bottom:30px}.row{background:#ffffff;border:1px solid rgba(220,38,38,.18);border-radius:14px;padding:16px 20px;margin-bottom:12px}.row b{display:block;color:#dc2626;font-size:.78rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}.row span{white-space:pre-wrap}.foot{margin-top:40px;text-align:center;color:#9ca3af;font-size:.85rem}</style></head><body><div style="display:inline-block;background:rgba(220,38,38,.15);padding:6px 16px;border-radius:99px;font-size:.8rem">🎤 Жобаны қорғау</div><h1>'+esc(p.name||"Жоба")+'</h1><p class="lead">«Жасанды интеллект және IT Startup» курсы · 11-сынып</p>'+rows+'<div class="foot">© Жасанды интеллект және IT Startup — цифрлық оқыту ресурсы</div></body></html>');
+    w.document.close();
+  });
+}
+
+function viewConclusion(){
+  const r = state.reflection || {};
+  const QS = [
+    {k:"q1", t:"Мен үшін ең қызықты тақырып..."},
+    {k:"q2", t:"Мен үшін ең қиын тақырып..."},
+    {k:"q3", t:"Мен жаңа үйренген нәрсе..."},
+    {k:"q4", t:"Мен өзім қолданғым келетін технология..."},
+    {k:"q5", t:"Менің startup идеям..."}
+  ];
+  return '<h1>🎓 Қорытынды</h1>' +
+    '<p class="muted">Курс бойынша негізгі білімді жинақтап, өз ойыңды тұжырымда.</p>' +
+    '<div class="spacer"></div>' +
+    '<div class="grid g2">' +
+      '<div class="card">' +
+        '<h2>📌 Курстан алған білім</h2>' +
+        '<ul style="margin-left:20px;color:#4b5563">' +
+          '<li><b>ЖИ туралы:</b> жасанды интеллект — деректер мен алгоритмге негізделген, өз бетінше үйрене алатын жүйе.</li>' +
+          '<li><b>Машиналық оқыту:</b> деректерден заңдылықты автоматты табу.</li>' +
+          '<li><b>Нейрондық желі:</b> кіріс, жасырын және шығыс қабаттардан тұратын құрылым.</li>' +
+          '<li><b>Startup:</b> мәселеден басталып, MVP мен нарықтық тексеру арқылы дамитын жаңа бизнес.</li>' +
+          '<li><b>Жобаны жылжыту:</b> маркетинг, брендинг, SMM және контент.</li>' +
+          '<li><b>Жарнама:</b> нақты слоган, нақты CTA және AIDA моделі.</li>' +
+        '</ul>' +
+      '</div>' +
+      '<div class="card">' +
+        '<h2>🧠 «Мен не үйрендім?»</h2>' +
+        '<p class="muted small">Интерактивті рефлексия. Жауаптарың автоматты сақталады.</p>' +
+        '<div class="spacer-sm"></div>' +
+        QS.map(q=>'<div class="field"><label>'+esc(q.t)+'</label><textarea data-rf="'+q.k+'" placeholder="Жауабыңды жаз...">'+esc(r[q.k]||"")+'</textarea></div>').join("") +
+        '<button class="btn" id="saveRefl">💾 Рефлексияны сақтау</button>' +
+        '<div class="feedback" id="reflFb"></div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="spacer"></div>' +
+    '<div class="card center">' +
+      '<h2>🏁 Келесі қадам</h2>' +
+      '<p class="muted">Қорытынды IT startup жобаңды аяқтап, оны қорғауға дайындал.</p>' +
+      '<div class="spacer-sm"></div>' +
+      '<div class="row" style="justify-content:center">' +
+        '<button class="btn" onclick="go(\'project\')">🚀 Жобаны аяқтау</button>' +
+        '<button class="btn ghost" onclick="go(\'media\')">🎬 Медиатека</button>' +
+      '</div>' +
+    '</div>';
+}
+
+function bindReflection(){
+  document.querySelectorAll("[data-rf]").forEach(inp=>{ inp.addEventListener("input", ()=>{ if(!state.reflection) state.reflection = {}; state.reflection[inp.dataset.rf] = inp.value; saveState(); }); });
+  const b = document.getElementById("saveRefl");
+  if(b) b.addEventListener("click", ()=>{ const fb = document.getElementById("reflFb"); fb.className = "feedback ok"; fb.textContent = "✅ Рефлексия сақталды!"; saveState(); });
+}
+
+(function init(){ go("home"); })();
+</script>
+</body>
+</html>
